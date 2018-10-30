@@ -38,24 +38,24 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 function mix_scripts() {
 
-	if ( file_exists( get_template_directory() . '/dist/css/app.css' ) ) {
-		wp_enqueue_style( 'mix-app-css', get_template_directory_uri() . '/dist/css/app.css', null, filemtime( get_template_directory() . '/dist/css/app.css' ) );
+	if ( file_exists( get_template_directory() . '/assets/dist/css/theme.css' ) ) {
+		wp_enqueue_style( 'mix-app-css', get_template_directory_uri() . '/assets/dist/css/theme.css', null, filemtime( get_template_directory() . '/assets/dist/css/theme.css' ) );
 	}
 
 	if ( file_exists( get_template_directory() . '/assets/js/vendors/enquire.min.js' ) ) {
 		wp_enqueue_script( 'mix-manifest3-js', get_template_directory_uri() . '/assets/js/vendors/enquire.min.js', null, filemtime( get_template_directory() . '/assets/js/vendors/enquire.min.js' ), true );
 	}
 
-	if ( file_exists( get_template_directory() . '/dist/js/manifest.js' ) ) {
-		wp_enqueue_script( 'mix-manifest-js', get_template_directory_uri() . '/dist/js/manifest.js', null, filemtime( get_template_directory() . '/dist/js/manifest.js' ), true );
+	if ( file_exists( get_template_directory() . '/assets/dist/js/manifest.js' ) ) {
+		wp_enqueue_script( 'mix-manifest-js', get_template_directory_uri() . '/assets/dist/js/manifest.js', null, filemtime( get_template_directory() . '/assets/dist/js/manifest.js' ), true );
 	}
 
-	if ( file_exists( get_template_directory() . '/dist/js/vendor.js' ) ) {
-		wp_enqueue_script( 'mix-vendor-js', get_template_directory_uri() . '/dist/js/vendor.js', null, filemtime( get_template_directory() . '/dist/js/vendor.js' ), true );
+	if ( file_exists( get_template_directory() . '/assets/dist/js/vendor.js' ) ) {
+		wp_enqueue_script( 'mix-vendor-js', get_template_directory_uri() . '/assets/dist/js/vendor.js', null, filemtime( get_template_directory() . '/assets/dist/js/vendor.js' ), true );
 	}
 
-	if ( file_exists( get_template_directory() . '/dist/js/app.js' ) ) {
-		wp_enqueue_script( 'mix-app-js', get_template_directory_uri() . '/dist/js/app.js', array( 'jquery' ), filemtime( get_template_directory() . '/dist/js/app.js' ), true );
+	if ( file_exists( get_template_directory() . '/assets/dist/js/theme.js' ) ) {
+		wp_enqueue_script( 'mix-app-js', get_template_directory_uri() . '/assets/dist/js/theme.js', array( 'jquery' ), filemtime( get_template_directory() . '/assets/dist/js/theme.js' ), true );
 	}
 
 }
@@ -126,10 +126,10 @@ add_post_type_support( 'page', 'excerpt' );
 
 function wpse_setup_theme() {
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'blog-sm', 91, 58, true );
-	add_image_size( 'attorney-sb', 360, 458, true );
-	add_image_size( 'attorney-feature', 264, 343, true );
-	add_image_size( 'attorney-md', 390, 431, true );
+	//add_image_size( 'blog-sm', 91, 58, true );
+	//add_image_size( 'attorney-sb', 360, 458, true );
+	//add_image_size( 'attorney-feature', 264, 343, true );
+	//add_image_size( 'attorney-md', 390, 431, true );
 }
 
 add_action( 'after_setup_theme', 'wpse_setup_theme' );

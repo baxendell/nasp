@@ -13313,7 +13313,7 @@ body {
   line-height: normal;
   width: 100%;
   font-weight: 400;
-  font-family: "Asap", sans-serif;
+  font-family: "Overpass", sans-serif;
 }
 
 svg:not(:root) {
@@ -13457,6 +13457,17 @@ ul.slick-dots li button:focus {
 }
 
 /* purgecss start ignore */
+.banner {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+}
+
+.home .banner {
+  background-image: url("../../images/banners/nasp-home-banner.jpg");
+}
+
 /* purgecss start ignore */
 /* purgecss start ignore */
 
