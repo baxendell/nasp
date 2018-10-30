@@ -1,0 +1,81 @@
+$breakpoints: (
+        'xs-phone': 320px,
+        'phone': 480px,
+        'tablet': 768px,
+        'desktop': 992px,
+        'widescreen': 1200px,
+        'large': 1400px
+);
+
+// keywords
+$media-expressions: (
+        'screen': 'screen',
+        'print': 'print',
+        'handheld': 'handheld',
+        'landscape': '(orientation: landscape)',
+        'portrait': '(orientation: portrait)',
+        'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+        'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+@import 'vendors/include-media';
+
+/* purgecss start ignore */
+@import 'vendors/fontawesome5.min';
+@import 'vendors/slick';
+@import 'vendors/bootstrap';
+/* purgecss end ignore */
+
+/* purgecss start ignore */
+@import 'base/custom-bootstrap';
+@import 'base/reset';
+@import 'base/fonts';
+@import 'base/variables';
+@import 'base/functions';
+@import 'base/mixins';
+/* purgecss start ignore */
+@import 'base/helpers';
+@import 'base/global';
+@import 'base/typography';
+
+@import 'layouts/common';
+@import 'elements/buttons';
+@import 'elements/form';
+@import 'elements/video';
+@import 'elements/accordions';
+@import 'elements/breadcrumbs';
+@import 'elements/pagination';
+/* purgecss start ignore */
+@import 'elements/faqs';
+@import 'elements/slider';
+@import 'elements/modals';
+
+@import 'area/header';
+@import 'area/nav';
+/* purgecss start ignore */
+@import 'area/hero';
+@import 'area/main';
+@import 'area/sidebar';
+@import 'area/footer';
+
+//@import 'parts/results';
+@import 'parts/intro';
+@import 'parts/testimonials';
+@import 'parts/awards';
+@import 'parts/team';
+@import 'parts/recent-news';
+
+@import 'pages/about';
+@import 'pages/contact';
+/* purgecss start ignore */
+@import 'pages/blog';
+@import 'pages/page404';
+@import 'pages/single';
+@import 'pages/archive-testimonial';
+@import 'pages/archive-result';
+@import 'pages/site-map';
+@import 'pages/search';
+@import 'pages/frontpage';
+@import 'pages/generic';
+@import 'pages/video-library';
+@import 'pages/press';

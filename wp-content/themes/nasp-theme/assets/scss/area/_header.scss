@@ -1,0 +1,10 @@
+.banner {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	color: $white;
+	
+	.home & {
+		background-image: url('../../images/banners/nasp-home-banner.jpg');
+	}
+}
