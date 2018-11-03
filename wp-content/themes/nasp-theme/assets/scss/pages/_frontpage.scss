@@ -1,0 +1,36 @@
+.border-content {
+	padding: 57px 74px 60px;
+	border-left: 3px solid $red;
+	border-right: 3px solid $red;
+	border-bottom: 3px solid $red;
+
+	.btn {
+		position: absolute;
+		bottom: -47px;	
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.offset-video {
+	position: absolute;
+	right: -50px;
+	bottom: -52px;
+
+	img {
+		box-shadow: 13px 7px 15px 0px rgba(0, 0, 0, 0.2);
+	}
+
+	&:before {
+		content: '';
+		width: 72px;
+		height: 72px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 215px;
+		background: url('../../images/icons/play-icon.svg');
+		z-index: 2;
+		pointer-events: none;
+	}
+}

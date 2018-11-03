@@ -13,45 +13,35 @@
 
       ?>
 
-      <section id="callouts" class="carousel-holder carousel-wrapper hidden-print">
+      <section class="clients">
 
         <div class="container">
 
-          <div class="row carousel">
+          <div class="row align-items-center justify-content-between">
 
-            <h3 class="text-center text-uppercase">a practice built on trust</h3>
+            <div class="col-md-3">
 
-            <div class="mask">
-
-              <div id="association-rack" class="col-xs-12">
-
-                <?php while($awards_query->have_posts()): $awards_query->the_post();?>
-
-                <div class="slide item">
-
-                  <div class="image-holder">
-
-                    <?php if(get_field('script')): the_field('script'); else: ?>
-
-                    <a href="<?php the_field('award_link') ?>" target="_blank">
-
-                      <?php the_post_thumbnail('full');?>
-
-                    </a>
-
-                    <?php endif; ?>
-
-                  </div>
-
-                </div>
-
-                <?php endwhile; wp_reset_postdata(); ?>
-
-              </div>
+              <h2>a few of our clients</h2>
 
             </div>
 
-            <div class="customNavigationAwards"></div>
+            <div class="col-md-8">
+
+              <ul class="client-list justify-content-between">
+
+                <?php while($awards_query->have_posts()): $awards_query->the_post();?>
+
+                <li>
+                  <a href="<?php the_field('award_link') ?>" target="_blank">
+                     <?php the_post_thumbnail('full');?>
+                  </a>
+                </li>
+
+                <?php endwhile; ?>
+
+              </ul>
+
+            </div>
 
           </div>
 

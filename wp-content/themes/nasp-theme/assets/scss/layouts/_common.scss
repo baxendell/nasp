@@ -2,3 +2,34 @@
   float: none;
   margin: 0 auto;
 }
+
+.main {
+	position: relative;
+	overflow: hidden;
+	
+	.container {
+		z-index: 2;
+	}
+
+	&:before, &:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		background-repeat: no-repeat;
+	}
+
+	&:before {
+		background-image: url('../../images/left-upper-dots.jpg');
+		left: 0;
+		width: 440px;
+		height: 439px;
+	}
+	&:after {
+		background-image: url('../../images/right-upper-dots.jpg');
+		right: 0;
+		width: 455px;
+		height: 490px;
+		z-index: 1;		
+	}
+
+}

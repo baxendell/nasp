@@ -1,0 +1,21 @@
+.btn {
+	background: none;
+	border: none;
+	text-transform: uppercase;	
+	border-radius: 0;
+
+	&-search {
+		color: white;
+	}
+
+	&-1 {
+		background: $red;
+		color: $white;
+		font-weight: 500;
+		font-size: 15px;
+		text-align: center;
+		padding: 15px 34px 10px;
+		letter-spacing: .1em;
+		font-family: $heading-font;
+	}
+}

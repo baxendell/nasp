@@ -126,25 +126,60 @@
 
 								<div class="banner-slider-item">
 
-									<h1 class="banner-slider-title"><!--content--></h1>
+									<h1 class="banner-slider-title"><?php the_field('h1_title') ?></h1>
 
-									<h2><!--subtitle--></h2>
+									<h2 class="banner-slider-subtitle"><?php the_field('first_slide_subtitle') ?></h2>
 
-								</div><!--repeat-->
+								</div>
+
+								<div class="banner-slider-item">
+
+									<h2 class="banner-slider-title"><?php the_field('second_slide_subtitle') ?></h2>
+
+									<h3 class="banner-slider-subtitle"><?php the_field('second_slide_subtitle') ?></h3>
+
+								</div>
+
+								<div class="banner-slider-item">
+
+									<h2 class="banner-slider-title"><?php the_field('third_slide_subtitle') ?></h2>
+
+									<h3 class="banner-slider-subtitle"><?php the_field('third_slide_subtitle') ?></h3>
+
+								</div>
 
 							</div>
 
 						</div>
 
+						<?php
+						$args = array (
+							'post_type' => 'event',
+							'posts_per_page' => '2',
+							'order' => 'menu_order'
+							);
+
+						$e_query = new WP_Query($args);
+
+						if($e_query->have_posts()):
+
+						?>
+
 						<div class="col-lg-3 events">
+
+							<?php while($e_query->have_posts()): $e_query->the_post(); ?>
 
 							<div class="events-item">
 
-								<a href="#"><span class="events-item-date"><!--date--> | </span> <!--title--></a>
+								<a href="#"><div><span class="events-item-date"><?php the_field('event_date') ?> | </span> <?php the_title() ?></div> <i class="fal fa-arrow-right"></i></a>
 
-							</div><!--repeat one more-->
+							</div>
+
+							<?php endwhile ?>
 
 						</div>
+
+						<?php endif; wp_reset_postdata(); ?>
 
 					</div>
 

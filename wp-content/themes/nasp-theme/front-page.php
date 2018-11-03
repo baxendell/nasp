@@ -15,29 +15,39 @@ get_header();
 
 		<div class="row">
 
-			<div class="col-lg-9 border-content">
+			<div class="col-lg-9">
 
-				<div class="row no-gutters">
+				<div class="border-content">
 
-					<div class="offset-lg-1 col-lg-5">
+					<div class="row no-gutters">
 
-						<!--content-->
+						<div class="offset-lg-1 col-lg-5">
+
+							<?php if ( have_posts() ) : while ( have_posts() ) : the_post() ?>
+
+								<?php the_content() ?>
+
+							<?php endwhile; endif; ?>
+
+						</div>
 
 					</div>
 
-				</div>
+					<a class="btn btn-1" href="#">Learn More</a>
 
-				<a class="btn btn-1" href="#">Learn More</a>
+				</div>
 
 			</div>
 
 		</div>
 
-		<div class="offset-video col-lg-7">
+		<div class="offset-video col-lg-7 text-right">
 
 			<a href="#" data-toggle="modal" data-target="#exampleModalCenter">
 
-				<!--video-->
+				<?php $vImg = get_field('video_image'); ?>
+
+				<img src="<?php echo $vImg['url'] ?>" alt="<?php echo $vImg['alt'] ?>"/>
 
 			</a>
 
@@ -50,7 +60,7 @@ get_header();
 		          </button>
 
 			      <div class="modal-body">
-			        ...
+			        <?php the_field('video_embed') ?>
 			      </div>
 
 			    </div>
@@ -61,23 +71,31 @@ get_header();
 
 	</div>
 
+	<?php $post_objects = get_field('testimonials'); if( $post_objects ): ?>
+
 	<div class="testimonials">
 
-		<h2><!--title--></h2>
+		<h2>people have said...</h2>
 
 		<div class="testimonials-slider">
 
+		<?php foreach( $post_objects as $post): setup_postdata($post); ?>
+
 			<div class="testimonials-item">
 
-				<!--content-->
+				<?php the_content() ?>
 
-				<cite><!--title--></cite>
+				<cite><?php the_title() ?></cite>
 
-			</div><!--repeat-->
+			</div>
+
+		<?php endforeach; wp_reset_postdata(); ?>
 
 		</div>
 
 	</div>
+
+	<?php endif ?>
 
 </section>
 
@@ -89,9 +107,9 @@ get_header();
 
 			<div class="col-lg-4">
 
-				<h2><!--title--></h2>
+				<h2><?php the_field('section_3_title') ?></h2>
 
-				<!--content-->
+				<?php the_field('section_3_text') ?>
 
 			</div>
 
@@ -107,15 +125,9 @@ get_header();
 
 		<div class="row align-items-center justify-content-around no-gutters">
 
-			<div class="col-md-4">
+			<div class="col-12">
 
-				<!--content-->
-
-			</div>
-
-			<div class="col-md-4">
-
-				<!--content-->
+				<?php the_field('section_4_text') ?>
 
 			</div>
 
@@ -133,9 +145,9 @@ get_header();
 
 			<div class="col-lg-4">
 
-				<h2><!--title--></h2>
+				<h2><?php the_field('certifications_title') ?></h2>
 
-				<!--content-->
+				<?php the_field('certifications_text') ?>
 
 				<a class="btn btn-1" href="#">Learn More</a>
 
@@ -167,44 +179,6 @@ get_header();
 
 </section>
 
-<section class="clients">
-
-	<div class="container">
-
-		<div class="row align-items-center justify-content-between">
-
-			<div class="col-md-3">
-
-				<h2><!--title--></h2>
-
-			</div>
-
-			<div class="col-md-8">
-
-				<ul class="client-list justify-content-between">
-
-					<li><a href="#" target="_blank"><!--image--></a></li><!--repeat-->
-
-				</ul>
-
-			</div>
-
-		</div>
-
-	</div>
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
+<?php get_template_part('partials/awards') ?>
 
 <?php get_footer() ?>
-

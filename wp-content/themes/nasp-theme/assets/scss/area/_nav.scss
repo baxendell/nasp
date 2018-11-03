@@ -1,0 +1,50 @@
+.navbar {
+	flex-direction: column;
+	align-items: initial;
+	
+	&-nav {
+		flex-direction: row;
+
+		>li {
+			>a {
+				color: $white;
+				text-transform: uppercase;
+				font-size: 14px;
+				position: relative;
+				padding: 0 8px 14px;
+
+				&:after {
+					position: absolute;
+					width: 100%;
+					height: 3px;
+					background: transparent;
+					content: '';
+					display: block;
+					border: none;
+				}
+
+				&:hover, &:focus {
+					&:after {
+						background: $gold;
+					}
+				}
+			}
+		}
+	}
+
+	&-social {
+		display: flex;
+		justify-content: end;
+		width: 100%;
+		margin-bottom: 15px;
+
+		a {
+			color: #7e8fa6;
+			padding: 0 10px;
+
+			&:hover, &:focus {
+				color: $white;
+			}
+		}
+	}
+}

@@ -1,10 +1,78 @@
+
+.top-header {
+	.container-fluid {
+		max-width: 1600px;
+	}
+}
 .banner {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
 	color: $white;
-	
+	position: relative;
+
 	.home & {
 		background-image: url('../../images/banners/nasp-home-banner.jpg');
+		height: 755px;
+	}
+
+	&-slider {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+
+		&-wrap {
+			padding: 57px 74px 60px;
+			border-left: 3px solid $red;
+			border-right: 3px solid $red;
+			border-top: 3px solid $red;
+		}
+
+		&-title {
+			font-size: 55px;
+			text-transform: uppercase;
+			font-weight: 500;
+			line-height: 1;
+			letter-spacing: .05em;
+			margin-bottom: 6px;
+		}
+
+		&-subtitle {
+			color: $gold;
+			font-family: $default-font;
+			font-size: 20px;
+			line-height: 2.75;
+			letter-spacing: .1em;
+		}
+	}
+	.events {
+		padding-top: 100px;
+
+		&-item {
+			font-size: 25px;
+			font-family: $heading-font;
+			line-height: 1;
+			letter-spacing: .03em;
+			position: relative;
+			margin-bottom: 32px;
+			a {
+				color: $white;
+				display: block;
+
+				div {
+					border-bottom: 3px solid $gold;
+					padding-bottom: 8px;
+					padding-right: 20px;
+				}
+			}
+
+			i {
+				font-size: 16px;
+				position: absolute;
+				bottom: 15px;
+				right: 0;
+			}
+		}
+
 	}
 }
