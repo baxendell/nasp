@@ -6,7 +6,7 @@
 .main {
 	position: relative;
 	overflow: hidden;
-	
+
 	.container {
 		z-index: 2;
 	}
@@ -32,4 +32,68 @@
 		z-index: 1;		
 	}
 
+}
+
+.split-bg {
+	background-image: url('../../images/backgrounds/grid-bg.jpg');
+	padding: 89px 0 14px;
+	position: relative;
+	* {
+		color: $white;
+	}
+
+	&:before {
+		width: 63%;
+		height: 100%;
+		content: '';
+		display: block;
+		background-position: left top;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&.home-section-3 {
+		&:before {
+			background-image: url('../../images/backgrounds/hard-hat-bg.jpg');
+		}
+	}
+
+	&.home-section-5 {
+		&:before {
+			background-image: url('../../images/backgrounds/beam-bg.jpg');
+		}
+	}	
+
+	h2 {
+		line-height: 1;
+		font-size: 35px;
+		margin-bottom: 57px;
+
+		strong {
+			font-size: 84px;
+			float: left;
+			margin-right: 5px;
+			position: relative;
+			top: -4px;
+		}
+	}
+}
+
+.solid-bg {
+	background: linear-gradient(to right, #051829 0%,#232732 100%);
+
+	*  {
+		color: #a5a6b1;
+	}
+}
+
+.certification-icon {
+	width: 60px;
+	height: 57px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url('../../images/icons/certification.svg');
 }

@@ -2,8 +2,44 @@ h1,h2,h3,h4,h5 {
 	font-family: $heading-font;
 }
 
+h2 {
+	font-size: 40px;
+	text-transform: uppercase;
+}
+
 p {
 	color: $text;
 	line-height: 1.76;
 	margin-bottom: 36px;
+}
+
+ol {
+	list-style: none;
+	padding-left: 5px;
+
+	li {
+		counter-increment: li;
+		padding-left: 38px;
+		position: relative;
+		margin-bottom: 35px;
+		font-size: 20px;
+		text-transform: uppercase;
+		height: 56px;
+		display: flex;
+		align-items: center;
+		padding-top: 12px;
+		
+		&:before {
+			content: counter(li);
+			color: $gold;
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			top: 5px;
+			font-size: 60px;
+			font-weight: 300;
+			line-height: 1;
+			font-family: $heading-font;
+		}
+	}
 }

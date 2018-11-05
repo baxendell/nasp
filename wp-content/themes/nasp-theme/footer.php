@@ -3,7 +3,7 @@
 
       <div class="container">
 
-        <div class="row align-items-center justify-content-end">
+        <div class="row align-items-center justify-content-between">
 
           <div class="col-md-5">
 
@@ -27,7 +27,7 @@
 
     </footer>
     
-    <link href="https://fonts.googleapis.com/css?family=Khand:500|Overpass:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Khand:300,500|Overpass:300,400" rel="stylesheet">
 
 	<?php wp_footer() ?>
 

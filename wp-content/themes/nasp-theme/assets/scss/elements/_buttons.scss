@@ -1,11 +1,12 @@
 .btn {
-	background: none;
+	background: transparent;
 	border: none;
 	text-transform: uppercase;	
 	border-radius: 0;
 
 	&-search {
 		color: white;
+		background: transparent;
 	}
 
 	&-1 {

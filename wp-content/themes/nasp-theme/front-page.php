@@ -83,9 +83,11 @@ get_header();
 
 			<div class="testimonials-item">
 
+				<i>“</i>
+
 				<?php the_content() ?>
 
-				<cite><?php the_title() ?></cite>
+				<cite>- <?php the_title() ?></cite>
 
 			</div>
 
@@ -103,9 +105,9 @@ get_header();
 
 	<div class="container">
 
-		<div class="row align-items-center align-self-end">
+		<div class="row justify-content-end">
 
-			<div class="col-lg-4">
+			<div class="col-lg-4 align-self-end">
 
 				<h2><?php the_field('section_3_title') ?></h2>
 
@@ -141,15 +143,19 @@ get_header();
 
 	<div class="container">
 
-		<div class="row align-items-center align-self-end">
+		<div class="row justify-content-end">
 
-			<div class="col-lg-4">
+			<div class="col-lg-4 align-self-end">
 
-				<h2><?php the_field('certifications_title') ?></h2>
+				<h2><i class="certification-icon"></i><?php the_field('certifications_title') ?></h2>
 
 				<?php the_field('certifications_text') ?>
 
-				<a class="btn btn-1" href="#">Learn More</a>
+				<div class="text-center">
+
+					<a class="btn btn-1" href="#">Learn More</a>
+					
+				</div>
 
 			</div>
 

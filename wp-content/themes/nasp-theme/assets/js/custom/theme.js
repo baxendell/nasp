@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
 
         var slick = function () {
 
-           // FULL SLIDER
+           // Banner SLIDER
             $(".banner-slider-wrap").slick({
                 slidesToShow: 1,
                 infinite: false,
@@ -14,6 +14,18 @@ jQuery(document).ready(function ($) {
                 //appendArrows: '.practice-slider__arrows',                
                 dots: true,
             });
+
+            // Testimonial SLIDER
+            $(".testimonials-slider").slick({
+                centerMode: true,
+                centerPadding: '300px',
+                slidesToShow: 1,
+                infinite: true,
+                autoplay: true,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: false,
+            });            
 
         };
 

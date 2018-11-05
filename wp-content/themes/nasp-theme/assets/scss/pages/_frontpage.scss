@@ -34,3 +34,36 @@
 		pointer-events: none;
 	}
 }
+
+.home-section-4 {
+	padding: 75px 0 52px;
+
+	ol {
+		column-count: 2;
+		padding-left: 110px;
+	}
+}
+
+.home-section-5 {
+	padding-top: 75px;
+	padding-bottom: 0;
+	
+	h2 {
+		margin-bottom: 40px;
+		i {
+			float: left;
+			margin-right: 30px;
+		}
+	}
+
+	ul {
+		margin-bottom: 56px;
+	}
+
+	li {
+		font-size: 14px;
+		text-transform: uppercase;
+		border-bottom: 2px solid #b8a68a;
+		padding: 8px 0;
+	}
+}
