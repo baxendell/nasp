@@ -67,3 +67,153 @@
 		padding: 8px 0;
 	}
 }
+
+.card {
+	&_section { 
+		padding: 7em 0 3em;
+	}
+
+	&_list {
+		text-align: left;
+
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+
+			li {
+				padding-bottom: 3em; 
+				position: relative;
+
+				&:after {
+					content: ""; 
+					position: absolute; 
+					background: #dddddd; 
+					width: calc(100% - 70px); 
+					left: 29px; 
+					top: 4.4em; 
+					height: 1px ;
+				}
+
+				&:last-child {
+					&:after {
+						display: none;
+					}
+				}
+
+				>div {
+					img {
+						display: block;
+
+						&.card_active {
+							display: none;
+						}
+					}
+
+					&.active-card {
+						img {
+							&.card_inactive {
+								display: none;
+							}
+							&.card_active {
+								display: block;
+							}
+						}
+					}
+				}
+
+			}
+		}
+	}
+
+	&_content {
+		width: 70%;
+		margin-left: 5%;
+		h5 {
+			font-size: 13px; 
+			text-transform: uppercase; 
+		}
+	}
+}
+
+.cards {
+
+	&_section {
+		width: 100%; 
+		position: relative; 
+		height: 360px;
+
+		>div {
+			height: 100%; 
+			display: flex; 
+			align-items: center; 
+			flex-wrap: wrap; 
+			text-align: left;
+		}
+	}
+
+	&_container {
+		width: 100%; 
+		padding: 0 30px;
+
+		h3 { 
+			color: $white; 
+			font-weight: 500;
+			font-size: 25px;
+			line-height: .97;
+			letter-spacing: .025em;
+			padding-top: 30px; 
+		}
+
+		p { 
+			font-size: 17px; 
+			padding-top: 1.3em; 
+			width: 100%; 
+			color: #a5a6b1;
+		}
+	}
+}
+
+.first_card {  
+	background-color: #2b2d41; 
+	z-index: 99;  
+}
+
+.second_card { 
+	background-color: #84152a; 
+	transform: translateY(-1.6em) scale(0.95); 
+	z-index: 98;  
+}
+
+.third_card { 
+	background-color: #99845f; 
+	transform: translateY(-4em) scale(0.85); 
+	z-index: 97; 
+}
+
+.fourth_card { 
+	background-color: #92a2b0; 
+	transform: translateY(-6.5em) scale(0.75); 
+	z-index: 94; 
+}
+
+.fifth_card { 
+	background-color: yellow; 
+	transform: translateY(-9em) scale(0.65); 
+	z-index: 93; 
+}
+
+.sixth_card { 
+	background-color: purple; 
+	transform: translateY(-11.5em) scale(0.55); 
+	z-index: 92; 
+}
+
+
+.first_card, .second_card, .third_card, .fourth_card, .fifth_card, .sixth_card {
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	transition: all 0.3s ease-in-out;
+	box-shadow: 0px 0px 40px 1px rgba(0, 0, 0, 0.38); 
+}
