@@ -49,10 +49,14 @@
 		display: block;
 		background-position: left top;
 		background-repeat: no-repeat;
-		background-size: 100%;
+		background-size: cover;
 		position: absolute;
 		top: 0;
 		left: 0;
+
+		@media screen and (min-width: 1200px) {
+			background-size: 100%;
+		}
 	}
 
 	&.home-section-3 {
@@ -90,10 +94,66 @@
 	}
 }
 
+/**Icons**/
+
 .certification-icon {
 	width: 60px;
 	height: 57px;
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-image: url('../../images/icons/certification.svg');
+}
+
+.article-icon {
+	width: 62px;
+	height: 62px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url('../../images/icons/article.svg');
+	display: block;
+}
+
+.calendar-icon {
+	width: 49px;
+	height: 49px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url('../../images/icons/calendar.svg');
+	display: block;
+}
+
+.handshake-icon {
+	width: 54px;
+	height: 54px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url('../../images/icons/handshake.svg');
+	display: block;
+}
+
+.letter-icon {
+	width: 36px;
+	height: 42px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url('../../images/icons/letter.svg');
+	display: block;
+}
+
+.meeting-icon {
+	width: 54px;
+	height: 54px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url('../../images/icons/meeting.svg');
+	display: block;
+}
+
+.notepad-icon {
+	width: 51px;
+	height: 51px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url('../../images/icons/noepad.svg');
+	display: block;
 }

@@ -4,7 +4,7 @@
         'post_type'      => 'awards',
         'posts_per_page' => -1,
         'orderby'        => 'menu_order',
-        'order'          => 'ASC'
+        'order'          => 'DESC'
         );
 
         $awards_query = new WP_Query( $awards_args );
@@ -17,17 +17,21 @@
 
         <div class="container">
 
-          <div class="row align-items-center justify-content-between">
+          <div class="row align-items-center justify-content-center">
 
             <div class="col-md-3">
 
-              <h2>a few of our clients</h2>
+              <div class="clients-title">
+
+                <h2>a few of our clients</h2>
+
+              </div>
 
             </div>
 
             <div class="col-md-8">
 
-              <ul class="client-list justify-content-between">
+              <ul class="clients-list justify-content-between">
 
                 <?php while($awards_query->have_posts()): $awards_query->the_post();?>
 

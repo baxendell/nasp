@@ -82,7 +82,7 @@
 
 			            </div>
 
-						<nav id="nav" class="navbar col-lg-auto visible-lg">
+						<nav id="nav" class="navbar col-lg-9 col-xl-auto visible-lg">
 
 							<ul class="navbar-social list-inline">
 

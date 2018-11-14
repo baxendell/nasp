@@ -173,7 +173,7 @@ get_header();
 
 			<div class="col-md-9">
 
-				<h2><!--title--></h2>
+				<h2>Stay in the know:</h2>
 
 				<div class="card_section">
                     <div class="cards_images">
@@ -182,7 +182,8 @@ get_header();
                                 <div class="cards_container">
                                     <h3>Sign Up for the NASP Newsletter Now!</h3>
                                     <p>Informative Articles. Stay up-to-date on upcoming courses. Never miss a special offer. Don't wait... Sign up today!</p>
-                                    <a class="btn btn-1" href="#">Sign Up</a>
+
+                                    <?php get_template_part('partials/newsletter') ?>
                                 </div>
                             </div>
 
@@ -192,7 +193,7 @@ get_header();
                                 <?php $post_object = get_field('featured_article_card'); 
                                 if( $post_object ): $post = $post_object; setup_postdata( $post ); ?>
 
-                                    <?php the_post_thumbnail('large') ?>
+                                    <?php the_post_thumbnail('medium') ?>
 
                                     <h3><?php the_title() ?></h3>
                                     <?php the_excerpt() ?>
@@ -240,26 +241,20 @@ get_header();
 
                                 </div>
                             </div>
-                            <!--
-                            <div class="fifth_card" style="transform: translateY(-6.5em) scale(0.75); opacity: 1; visibility: visible; z-index: 96;">
+                            <div class="fifth_card">
                                 <div class="cards_container">
-                                    <img class="card_active" alt="image" src="https://www.gnosisconnect.com/assets/images/icons4.png">
-                                    <h3>Increase Adoption<span>Leverage Gnosis LMS's Cloud and Mobile.</span></h3>
-                                    <p>Mobile-ready capabilities to provide your learners 24/7 access to training programs anytime, anywhere and on any device!</p>
+                                    <?php the_field('on-site_training_card') ?>
 
                                 </div>
                             </div>
 
-                            <div class="sixth_card" style="transform: translateY(-6.5em) scale(0.75); opacity: 1; visibility: visible; z-index: 96;">
+                            <div class="sixth_card">
                                 <div class="cards_container">
-                                    <img class="card_active" alt="image" src="https://www.gnosisconnect.com/assets/images/icons4.png">
-                                    <h3>Increase Adoption<span>Leverage Gnosis LMS's Cloud and Mobile.</span></h3>
-                                    <p>Mobile-ready capabilities to provide your learners 24/7 access to training programs anytime, anywhere and on any device!</p>
+                                    <?php the_field('franchise_card') ?>
 
                                 </div>
                             </div>                            
 
-							-->
                         </div>
 
                     </div>
@@ -269,8 +264,7 @@ get_header();
                             <li>
                                 <a class="card1_click active-card" href="javascript:void(0)" rel="active-card">
                                     <div class="card_image">
-                                        <img class="card_inactive" alt="image" src="https://www.gnosisconnect.com/assets/images/cards_icon1.png">
-                                        <img class="card_active" alt="image" src="https://www.gnosisconnect.com/assets/images/cards_icon1_active.png">
+                                        <?php include('assets/images/icons/letter.svg') ?>
                                     </div>
                                     <div class="card_content">
                                         <h5>Sign Up Now </h5>
@@ -280,8 +274,7 @@ get_header();
                             <li>
                                 <a class="card2_click" href="javascript:void(0)">
                                     <div class="card_image">
-                                        <img class="card_inactive" alt="image" src="https://www.gnosisconnect.com/assets/images/cards_icon2.png">
-                                        <img class="card_active" alt="image" src="https://www.gnosisconnect.com/assets/images/cards_icon2_active.png">
+                                        <?php include('assets/images/icons/article.svg') ?>
                                     </div>
                                     <div class="card_content">
                                         <h5>Featured Article</h5>
@@ -291,8 +284,7 @@ get_header();
                             <li>
                                 <a class="card3_click" href="javascript:void(0)">
                                     <div class="card_image">
-                                        <img class="card_inactive" alt="image" src="https://www.gnosisconnect.com/assets/images/cards_icon3.png">
-                                        <img class="card_active" alt="image" src="https://www.gnosisconnect.com/assets/images/cards_icon3_active.png">
+                                        <?php include('assets/images/icons/noepad.svg') ?>
                                     </div>
                                     <div class="card_content">
                                         <h5>Featured Course</h5>
@@ -302,20 +294,17 @@ get_header();
                             <li>
                                 <a class="card4_click" href="javascript:void(0)">
                                     <div class="card_image">
-                                        <img class="card_inactive" alt="image" src="https://www.gnosisconnect.com/assets/images/cards_icon4.png">
-                                        <img class="card_active" alt="image" src="https://www.gnosisconnect.com/assets/images/cards_icon4_active.png">
+                                       <?php include('assets/images/icons/calendar.svg') ?>
                                     </div>
                                     <div class="card_content">
                                         <h5>Upcoming Events</h5>
                                     </div>
                                 </a>
                             </li>
-                            <!--
                             <li>
                                 <a class="card5_click" href="javascript:void(0)">
                                     <div class="card_image">
-                                        <img class="card_inactive" alt="image" src="https://www.gnosisconnect.com/assets/images/cards_icon4.png">
-                                        <img class="card_active" alt="image" src="https://www.gnosisconnect.com/assets/images/cards_icon4_active.png">
+                                        <?php include('assets/images/icons/meeting.svg') ?>
                                     </div>
                                     <div class="card_content">
                                         <h5>On-site Training</h5>
@@ -326,16 +315,13 @@ get_header();
                             <li>
                                 <a class="card6_click" href="javascript:void(0)">
                                     <div class="card_image">
-                                        <img class="card_inactive" alt="image" src="https://www.gnosisconnect.com/assets/images/cards_icon4.png">
-                                        <img class="card_active" alt="image" src="https://www.gnosisconnect.com/assets/images/cards_icon4_active.png">
+                                        <?php include('assets/images/icons/handshake.svg') ?>
                                     </div>
                                     <div class="card_content">
                                         <h5>Franchise Us</h5>
                                     </div>
                                 </a>
                             </li>
-							-->
-
 
                         </ul>
                     </div>

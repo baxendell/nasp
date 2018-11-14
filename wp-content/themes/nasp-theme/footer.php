@@ -5,7 +5,7 @@
 
         <div class="row align-items-center justify-content-between">
 
-          <div class="col-md-5">
+          <div class="col-lg-7 col-xl-5">
 
             <a href="tel:8009222219">800.922.2219</a> | <a href="mailto:info@naspweb.com">info@naspweb.com</a>
 

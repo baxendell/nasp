@@ -25,7 +25,19 @@ jQuery(document).ready(function ($) {
                 slidesToScroll: 1,
                 arrows: false,
                 dots: false,
-            });            
+            });
+
+            // Testimonial SLIDER
+            $(".card_list_box").slick({
+                slidesToShow: 4,
+                infinite: true,
+                autoplay: false,
+                slidesToScroll: 1,
+                arrows: true,
+                prevArrow: '<i class="fal fa-arrow-circle-left"></i>',
+                nextArrow: '<i class="fal fa-arrow-circle-right"></i>', 
+                dots: false,
+            });                       
 
         };
 
@@ -34,6 +46,7 @@ jQuery(document).ready(function ($) {
             var activeCardNumber = 1;
             var movingCards = null;
 
+            /*
             function startTimer() {
                 movingCards = setInterval(function () {
                     moveRight();
@@ -43,6 +56,7 @@ jQuery(document).ready(function ($) {
              function stopTimer() {
                 clearInterval(movingCards);
             }   
+            */
 
             function moveRight() {
                 var len = $('.card_list ul.card_list_box li');
@@ -53,15 +67,16 @@ jQuery(document).ready(function ($) {
                 }
             }
 
+                /*
              if ($('.card_list').length > 0) {
 
                 startTimer();
             }
-
+            */
             $('.card1_click').click(function () {
                 activeCardNumber = 1;
-                stopTimer();
-                startTimer();
+               // stopTimer();
+                //startTimer();
                 $(this).addClass('active-card');
                 $(this).attr('rel', 'active-card');
                 $(this).parent().siblings().children().removeClass('active-card');
@@ -92,12 +107,24 @@ jQuery(document).ready(function ($) {
                     'opacity': '1',
                     'visibility': 'visible',
                     'z-index': '96'
+                });
+                $('.fifth_card').css({
+                    'transform': 'translateY(-9em) scale(0.65)',
+                    'opacity': '1',
+                    'visibility': 'visible',
+                    'z-index': '95'
+                });
+                $('.sixth_card').css({
+                    'transform': 'translateY(-11.5em) scale(0.55)',
+                    'opacity': '1',
+                    'visibility': 'visible',
+                    'z-index': '94'
                 });
             });
             $('.card2_click').click(function () {
                 activeCardNumber = 2;
-                stopTimer();
-                startTimer();
+                //stopTimer();
+                //startTimer();
                 $(this).addClass('active-card');
                 $(this).attr('rel', 'active-card');
                 $(this).parent().siblings().children().removeClass('active-card');
@@ -105,10 +132,10 @@ jQuery(document).ready(function ($) {
 
                 /** card functionality start here **/
                 $('.first_card').css({
-                    'transform': 'translateY(-6.5em) scale(0.75)',
+                    'transform': 'translateY(-11.5em) scale(0.55)',
                     'opacity': '1',
                     'visibility': 'visible',
-                    'z-index': '96'
+                    'z-index': '94'
                 });
                 $('.second_card').css({
                     'transform': 'translateY(0em) scale(1)',
@@ -127,12 +154,24 @@ jQuery(document).ready(function ($) {
                     'opacity': '1',
                     'visibility': 'visible',
                     'z-index': '97'
+                });
+                $('.fifth_card').css({
+                    'transform': 'translateY(-6.5em) scale(0.75)',
+                    'opacity': '1',
+                    'visibility': 'visible',
+                    'z-index': '96'
+                });
+                $('.sixth_card').css({
+                    'transform': 'translateY(-9em) scale(0.65)',
+                    'opacity': '1',
+                    'visibility': 'visible',
+                    'z-index': '95'
                 });
             });
             $('.card3_click').click(function () {
                 activeCardNumber = 3;
-                stopTimer();
-                startTimer();
+                //stopTimer();
+                //startTimer();
                 $(this).addClass('active-card');
                 $(this).attr('rel', 'active-card');
                 $(this).parent().siblings().children().removeClass('active-card');
@@ -140,17 +179,17 @@ jQuery(document).ready(function ($) {
 
                 /** card functionality start here **/
                 $('.first_card').css({
-                    'transform': 'translateY(-4em) scale(0.85)',
+                    'transform': 'translateY(-9em) scale(0.65)',
                     'opacity': '1',
                     'visibility': 'visible',
-                    'z-index': '97'
+                    'z-index': '95'
 
                 });
                 $('.second_card').css({
-                    'transform': 'translateY(-6.5em) scale(0.75)',
+                    'transform': 'translateY(-11.5em) scale(0.55)',
                     'opacity': '1',
                     'visibility': 'visible',
-                    'z-index': '96'
+                    'z-index': '94'
                 });
                 $('.third_card').css({
                     'transform': 'translateY(0em) scale(1)',
@@ -163,12 +202,24 @@ jQuery(document).ready(function ($) {
                     'opacity': '1',
                     'visibility': 'visible',
                     'z-index': '98'
+                });
+                $('.fifth_card').css({
+                    'transform': 'translateY(-4em) scale(0.85)',
+                    'opacity': '1',
+                    'visibility': 'visible',
+                    'z-index': '97'
+                });
+                $('.sixth_card').css({
+                    'transform': 'translateY(-6.5em) scale(0.75)',
+                    'opacity': '1',
+                    'visibility': 'visible',
+                    'z-index': '96'
                 });
             });
             $('.card4_click').click(function () {
                 activeCardNumber = 4;
-                stopTimer();
-                startTimer();
+                //stopTimer();
+                //startTimer();
                 $(this).addClass('active-card');
                 $(this).attr('rel', 'active-card');
                 $(this).parent().siblings().children().removeClass('active-card');
@@ -176,35 +227,47 @@ jQuery(document).ready(function ($) {
 
                 /** card functionality start here **/
                 $('.first_card').css({
-                    'transform': 'translateY(-1.6em) scale(0.95)',
-                    'opacity': '1',
-                    'visibility': 'visible',
-                    'z-index': '98'
-                });
-                $('.second_card').css({
-                    'transform': 'translateY(-4em) scale(0.85)',
-                    'opacity': '1',
-                    'visibility': 'visible',
-                    'z-index': '97'
-                });
-                $('.third_card').css({
                     'transform': 'translateY(-6.5em) scale(0.75)',
                     'opacity': '1',
                     'visibility': 'visible',
                     'z-index': '96'
+                });
+                $('.second_card').css({
+                    'transform': 'translateY(-9em) scale(0.65)',
+                    'opacity': '1',
+                    'visibility': 'visible',
+                    'z-index': '95'
+                });
+                $('.third_card').css({
+                    'transform': 'translateY(-11.5em) scale(0.55)',
+                    'opacity': '1',
+                    'visibility': 'visible',
+                    'z-index': '94'
                 });
                 $('.fourth_card').css({
                     'transform': 'translateY(0em) scale(1)',
                     'opacity': '1',
                     'visibility': 'visible',
                     'z-index': '99'
+                });
+                $('.fifth_card').css({
+                    'transform': 'translateY(-1.6em) scale(0.95)',
+                    'opacity': '1',
+                    'visibility': 'visible',
+                    'z-index': '98'
+                });
+                $('.sixth_card').css({
+                    'transform': 'translateY(-4em) scale(0.85)',
+                    'opacity': '1',
+                    'visibility': 'visible',
+                    'z-index': '97'
                 });
             });
 
             $('.card5_click').click(function () {
-                activeCardNumber = 4;
-                stopTimer();
-                startTimer();
+                activeCardNumber = 5;
+                //stopTimer();
+                //startTimer();
                 $(this).addClass('active-card');
                 $(this).attr('rel', 'active-card');
                 $(this).parent().siblings().children().removeClass('active-card');
@@ -212,35 +275,47 @@ jQuery(document).ready(function ($) {
 
                 /** card functionality start here **/
                 $('.first_card').css({
-                    'transform': 'translateY(-1.6em) scale(0.95)',
-                    'opacity': '1',
-                    'visibility': 'visible',
-                    'z-index': '98'
-                });
-                $('.second_card').css({
                     'transform': 'translateY(-4em) scale(0.85)',
                     'opacity': '1',
                     'visibility': 'visible',
                     'z-index': '97'
                 });
-                $('.third_card').css({
+                $('.second_card').css({
                     'transform': 'translateY(-6.5em) scale(0.75)',
                     'opacity': '1',
                     'visibility': 'visible',
                     'z-index': '96'
                 });
+                $('.third_card').css({
+                    'transform': 'translateY(-9em) scale(0.65)',
+                    'opacity': '1',
+                    'visibility': 'visible',
+                    'z-index': '95'
+                });
                 $('.fourth_card').css({
+                    'transform': 'translateY(-11.5em) scale(0.55)',
+                    'opacity': '1',
+                    'visibility': 'visible',
+                    'z-index': '94'
+                });
+                $('.fifth_card').css({
                     'transform': 'translateY(0em) scale(1)',
                     'opacity': '1',
                     'visibility': 'visible',
                     'z-index': '99'
                 });
+                $('.sixth_card').css({
+                    'transform': 'translateY(-1.6em) scale(0.95)',
+                    'opacity': '1',
+                    'visibility': 'visible',
+                    'z-index': '98'
+                });
             });
 
             $('.card6_click').click(function () {
-                activeCardNumber = 4;
-                stopTimer();
-                startTimer();
+                activeCardNumber = 6;
+                //stopTimer();
+                //startTimer();
                 $(this).addClass('active-card');
                 $(this).attr('rel', 'active-card');
                 $(this).parent().siblings().children().removeClass('active-card');
@@ -266,6 +341,18 @@ jQuery(document).ready(function ($) {
                     'z-index': '96'
                 });
                 $('.fourth_card').css({
+                    'transform': 'translateY(-9em) scale(0.65)',
+                    'opacity': '1',
+                    'visibility': 'visible',
+                    'z-index': '95'
+                });
+                $('.fifth_card').css({
+                    'transform': 'translateY(-11.5em) scale(0.55)',
+                    'opacity': '1',
+                    'visibility': 'visible',
+                    'z-index': '94'
+                });
+                $('.sixth_card').css({
                     'transform': 'translateY(0em) scale(1)',
                     'opacity': '1',
                     'visibility': 'visible',
@@ -276,8 +363,8 @@ jQuery(document).ready(function ($) {
             $('.pulse').click(function () {
 
                 activeCardNumber = $(this).attr('data-active');
-                stopTimer();
-                startTimer();
+                //stopTimer();
+                //startTimer();
 
                 var thechosenone = $(this).attr('data-box');
                 var inner_test = $(this).attr('data-text');
