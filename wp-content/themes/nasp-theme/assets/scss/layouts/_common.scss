@@ -32,6 +32,12 @@
 		z-index: 1;		
 	}
 
+	&:first-of-type {
+		.headline {
+			margin-top: 86px;
+		}
+	}
+
 }
 
 .split-bg {

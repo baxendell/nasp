@@ -1,0 +1,28 @@
+.sidebar {
+	&-callout {
+		&-offset {
+			display: flex;
+			justify-content: flex-start;
+			p {
+				color: $gold;
+				width: 158px;
+				font-size: 21px;
+				font-weight: 300;
+				text-align: right;
+				margin: 36px 30px 0 30px;
+				line-height: 1;
+				a {
+					font-weight: 700;
+					color: $red;
+					display: block;
+					margin-top: 10px;
+				}
+			}
+
+			img {
+				top: -56px;
+				position: relative;
+			}
+		}
+	}
+}

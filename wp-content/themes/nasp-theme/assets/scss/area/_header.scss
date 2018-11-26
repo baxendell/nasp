@@ -1,7 +1,31 @@
 
 .top-header {
+	padding: 10px 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+
 	.container-fluid {
 		max-width: 1600px;
+	}
+
+	&.sps {
+		background-color: #001628;
+
+		.home & {
+			background-color: transparent;
+		}
+
+		&.sps--blw {
+			.home & {
+				background-color: #001628;
+			}		
+		}
+	}
+
+	&.sps--blw {
+		padding: 20px 0;
 	}
 }
 .banner {
@@ -74,5 +98,18 @@
 			}
 		}
 
+	}
+
+	&-interior {
+		background-repeat: no-repeat;
+		background-position: right top;
+		background-size: cover;
+		background-color: #8b7455;
+		height: 319px;
+		margin-top: 96px;
+		
+		.page-template-about-us & {
+			background-image: url('../../images/banners/nasp-about-us-banner.jpg');
+		}
 	}
 }

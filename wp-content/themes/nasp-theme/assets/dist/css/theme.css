@@ -20569,9 +20569,27 @@ h1, h2, h3, h4, h5 {
   font-family: "Khand", sans-serif;
 }
 
+.headline {
+  font-size: 40px;
+  color: #2b2d42;
+  margin-bottom: 0;
+  line-height: 1.25;
+  letter-spacing: .005em;
+}
+
 h2 {
   font-size: 40px;
   text-transform: uppercase;
+}
+
+.subtitle {
+  font-weight: 300;
+  color: #9e8862;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: .005em;
+  line-height: 1.25;
+  margin-bottom: 48px;
 }
 
 p {
@@ -20649,6 +20667,10 @@ ol li:before {
   width: 455px;
   height: 490px;
   z-index: 1;
+}
+
+.main:first-of-type .headline {
+  margin-top: 86px;
 }
 
 .split-bg {
@@ -20872,8 +20894,32 @@ ol li:before {
   display: none;
 }
 
+.top-header {
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
 .top-header .container-fluid {
   max-width: 1600px;
+}
+
+.top-header.sps {
+  background-color: #001628;
+}
+
+.home .top-header.sps {
+  background-color: transparent;
+}
+
+.home .top-header.sps.sps--blw {
+  background-color: #001628;
+}
+
+.top-header.sps--blw {
+  padding: 20px 0;
 }
 
 .banner {
@@ -20950,6 +20996,19 @@ ol li:before {
   right: 0;
 }
 
+.banner-interior {
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
+  background-color: #8b7455;
+  height: 319px;
+  margin-top: 96px;
+}
+
+.page-template-about-us .banner-interior {
+  background-image: url("../../images/banners/nasp-about-us-banner.jpg");
+}
+
 .navbar {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -21016,6 +21075,37 @@ ol li:before {
 }
 
 /* purgecss start ignore */
+.sidebar-callout-offset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.sidebar-callout-offset p {
+  color: #9e8862;
+  width: 158px;
+  font-size: 21px;
+  font-weight: 300;
+  text-align: right;
+  margin: 36px 30px 0 30px;
+  line-height: 1;
+}
+
+.sidebar-callout-offset p a {
+  font-weight: 700;
+  color: #a10e27;
+  display: block;
+  margin-top: 10px;
+}
+
+.sidebar-callout-offset img {
+  top: -56px;
+  position: relative;
+}
+
 footer {
   background: #001628;
   padding: 50px 0 12px;
@@ -21059,6 +21149,56 @@ footer .col-md-4 a.brand {
   color: #a5a6b1;
   font-size: 10px;
   margin-top: 25px;
+}
+
+.about-1 aside {
+  margin-top: 170px;
+}
+
+.about-1 aside img {
+  -webkit-box-shadow: 13px 7px 15px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 13px 7px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.blue-sec {
+  background-color: #081928;
+  background-image: url("../../images/backgrounds/drill-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding: 96px 0 70px;
+}
+
+.blue-sec .container {
+  position: relative;
+}
+
+.blue-sec .container:before {
+  width: 95%;
+  height: 625px;
+  border: 3px solid #a10e27;
+  top: -171px;
+  position: absolute;
+  left: 30px;
+  content: '';
+  display: block;
+}
+
+.blue-sec h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 30px;
+  letter-spacing: .005em;
+  text-transform: uppercase;
+}
+
+.blue-sec p {
+  color: #a5a6b1;
+}
+
+.blue-sec + section {
+  padding-top: 204px;
 }
 
 /* purgecss start ignore */

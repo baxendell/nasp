@@ -2,9 +2,27 @@ h1,h2,h3,h4,h5 {
 	font-family: $heading-font;
 }
 
+.headline {
+	font-size: 40px;
+	color: $text;
+	margin-bottom: 0;
+	line-height: 1.25;
+	letter-spacing: .005em;
+}
+
 h2 {
 	font-size: 40px;
 	text-transform: uppercase;
+}
+
+.subtitle {
+	font-weight: 300;
+	color: $gold;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: .005em;
+	line-height: 1.25;
+	margin-bottom: 48px;
 }
 
 p {

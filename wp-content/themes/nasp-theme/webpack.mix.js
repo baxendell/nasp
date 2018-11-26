@@ -11,6 +11,7 @@ const vendorLibs = [
     './assets/js/vendors/match-height.min.js',
     './assets/js/vendors/slick.js',
     './assets/js/vendors/enquire.min.js',
+    './assets/js/vendors/scrollPosStyler.min.js'
 ];
 
 const purgecssWordpress = {
