@@ -8,6 +8,7 @@ h1,h2,h3,h4,h5 {
 	margin-bottom: 0;
 	line-height: 1.25;
 	letter-spacing: .005em;
+	text-transform: uppercase;
 }
 
 h2 {
@@ -29,6 +30,31 @@ p {
 	color: $text;
 	line-height: 1.76;
 	margin-bottom: 36px;
+}
+
+article {
+	ul {
+		color: $text;
+		line-height: 1.76;
+		margin-bottom: 36px;	
+
+		li {
+			position: relative;
+			padding-left: 30px;
+			margin-bottom: 20px;
+
+			&:before {
+				position: absolute;
+				left: 0;
+				top: 6px;
+				background: $red;
+				content: '';
+				display: block;
+				height: 13px;
+				width: 13px;
+			}
+		}
+	}
 }
 
 ol {

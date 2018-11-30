@@ -105,61 +105,7 @@ get_header() ?>
 
 </section>
 
-<?php
-$args = array (
-	'post_type' => 'event',
-	'posts_per_page' => '2',
-	'order' => 'menu_order'
-	);
-
-$e_query = new WP_Query($args);
-
-if($e_query->have_posts()):
-
-?>
-
-<section class="upcoming-events">
-
-	<div class="container">
-
-		<div class="row">
-
-			<h2>Upcoming Events</h2>
-
-			<?php while($e_query->have_posts()): $e_query->the_post(); ?>
-
-			<div class="col-md-4">
-
-				<div class="upcoming-events-item">
-
-					<div class="events-item events-item__upcoming">
-
-						<a href="#">
-							<div>
-								<span class="events-item-date"><?php the_field('event_date') ?> | </span> <?php the_title() ?>
-							</div> 
-							<i class="fal fa-arrow-right"></i>
-						</a>
-
-						<?php the_excerpt() ?>
-
-						<a class="btn btn-1" href="<?php the_permalink() ?>">Learn More</a>
-
-					</div>
-
-				</div>
-
-			</div> 
-
-			<?php endwhile ?>
-
-		</div>
-
-	</div>
-
-</section>
-
-<?php endif; wp_reset_postdata(); ?>
+<?php get_template_part('partials/events') ?>
 
 <section class="main">
 

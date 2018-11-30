@@ -71,12 +71,6 @@
 .home-section-6 {
 	padding: 66px 0 40px;
 
-	.container {
-		background-repeat: no-repeat;
-		background-image: url('../../images/bottom-card-shadow.png');
-		background-position: center bottom;
-	}
-
 	h2 {
 		text-align: center;
 		margin-bottom: 38px;
@@ -409,7 +403,17 @@
 
 .clients {
 	padding-bottom: 56px;
-	
+
+	.container {
+		background-repeat: no-repeat;
+		background-image: url('../../images/bottom-card-shadow.png');
+		background-position: center top;
+	}
+
+	.row {
+		padding-top: 68px;
+	}
+
 	&-title {
 		padding-right: 32px;
 		border-right: 3px solid $gold;

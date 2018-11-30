@@ -1,0 +1,38 @@
+.course-section {
+	margin-top: 48px;
+	background: $beige;
+	position: relative;
+	padding: 75px 94px;
+
+	h2 {
+		position: absolute;
+		left: 30px;
+		top: 68px;
+		color: #c6c5c5;
+		font-size: 30px;
+	}
+
+	h3 {
+	 color: $red;
+	 font-size: 30px;
+	 margin-bottom: 10px;
+	}
+
+	a {
+		font-weight: 700;
+		text-decoration: underline;
+
+		&:after {
+			content: '';
+			background-image: url('../../images/icons/arrow_right.svg');
+			background-size: 100%;
+			width: 15px;
+			height: 15px;
+			display: inline-block;
+		}
+	}
+
+	.st0 {
+		fill: $red;
+	}
+}
