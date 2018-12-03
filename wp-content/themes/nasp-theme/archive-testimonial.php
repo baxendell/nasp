@@ -5,88 +5,78 @@
 get_header();
 
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-
+$post_330 = get_post('330');
+$content = $post_330->post_content;
+$featured_img_url = get_the_post_thumbnail_url('330','full'); 
 ?>
+<section class="main test-1">
 
-	<section id="main-content" itemscope itemtype="http://schema.org/Review">
+	<div class="container">
 
-		<div class="container">
+		<div class="row no-gutters">
 
-			<meta itemprop="itemReviewed" content="Clients Name Here." />
+			<article class="offset-md-1 col-md-6 pr-5">
 
-			<div class="inner-wrapper row">
+				<header>
+					<h1 class="headline"><?php h1_title('330') ?></h1>
+					<h2 class="subtitle"><?php the_field('subtitle', '330') ?></h2>
+				</header>
 
-				<div class="content col-md-7 no-pad-right clearfix">
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post() ?>
 
-					<h1 class="page-title"><?php h1_title( 558928 ) ?></h1>
+					<?php echo $content ?>
 
-					<?php if(have_posts() ) : ?>
+				<?php endwhile; endif; ?>
 
-						<?php while( have_posts() ) : the_post() ?>
+			</article>
 
-							 <div class="testimonial col-sm-6 text-center">
+			<aside class="col-md-5">
 
-					          <h3 class="testimonial-title"><?php the_title() ?></h3>
+				<img src="<?php echo $featured_img_url ?>" />
 
-					          <blockquote>
-					          <?php the_excerpt();
-					            if (has_term('car-accident', 'testimonial_category', $post->ID) ){
-					              $svg = 'wheel';
-					              $cat = 'car-accident';
-					            }
-					            elseif (has_term('defective-products', 'testimonial_category', $post->ID) ){
-					              $svg = 'pills';
-					              $cat = 'defective-products';
-					            }
-					            elseif (has_term('medical-malpractice', 'testimonial_category', $post->ID) ){
-					              $svg = 'star_of_life';
-					              $cat = 'medical-malpractice';
-					            }            
-					            else {
+			</aside>
 
-					            }
-					          ?>
-					            <div class="practice-icons-circle">
+		</div>
 
-					              <div class="practice-icons-circle__inner text-center <?php echo $cat?>-category">
+	</div>
 
-					                <?php include('images/icons/'.$svg.'.svg'); ?>
+</section>
 
-					              </div>
+<section id="testimonial-archive" itemscope itemtype="http://schema.org/Review">
 
-					            </div>
+	<div class="container">
 
+		<meta itemprop="itemReviewed" content="NASP" />
 
-					            <footer>
+		<div class="row no-gutters justify-content-center">
 
-					              <cite><?php the_field('client') ?></cite>
+		<?php if(have_posts() ) : ?>
 
-					              <?php the_field('client_type') ?>
+			<?php while( have_posts() ) : the_post() ?>		
 
-					            </footer>
+			<div class="col-md-5">
 
-					          </blockquote>
+				<div class="testimonials-item">
 
-					        </div>
+					<i>“</i>
 
-						<?php endwhile ?>
+					<?php the_content() ?>
 
-					<?php endif; wp_reset_postdata() ?>
-
-					<?php do_action( 'cws_pagination' ) ?>
-
-				</div>
-
-				<div class="col-md-4 col-md-offset-1" id="sidebar">
-
-					<?php get_template_part( 'sidebars/generic-sidebar' ) ?>
+					<cite>- <?php the_title() ?></cite>
 
 				</div>
 
 			</div>
+				<?php endwhile ?>
+
+			<?php endif; wp_reset_postdata() ?>
+
+			<?php do_action( 'cws_pagination' ) ?>
 
 		</div>
 
-	</section>
+	</div>
+
+</section>
 
 <?php get_footer() ?>

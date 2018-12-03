@@ -3,7 +3,7 @@
  * Template Name: Online Courses
  */
 get_header() ?>
-<section class="main about-1">
+<section class="main course-1">
 
 	<div class="container">
 

@@ -20599,19 +20599,19 @@ p {
   margin-bottom: 36px;
 }
 
-article ul {
+article ul, .entry-content ul {
   color: #2b2d42;
   line-height: 1.76;
   margin-bottom: 36px;
 }
 
-article ul li {
+article ul li, .entry-content ul li {
   position: relative;
   padding-left: 30px;
   margin-bottom: 20px;
 }
 
-article ul li:before {
+article ul li:before, .entry-content ul li:before {
   position: absolute;
   left: 0;
   top: 6px;
@@ -20694,6 +20694,10 @@ ol li:before {
 }
 
 .main:first-of-type .headline {
+  margin-top: 86px;
+}
+
+.main:first-of-type aside {
   margin-top: 86px;
 }
 
@@ -20921,43 +20925,109 @@ ol li:before {
   display: none;
 }
 
-.course-section {
+.course-section, .membership-section {
   margin-top: 48px;
   background: #edebe6;
   position: relative;
-  padding: 75px 94px;
+  padding: 75px 94px 48px;
 }
 
-.course-section h2 {
+.course-section h2, .membership-section h2 {
   position: absolute;
   left: 30px;
   top: 68px;
   color: #c6c5c5;
   font-size: 30px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: 155px 166px 0px;
+          transform-origin: 155px 166px 0px;
 }
 
-.course-section h3 {
+.page-template-membership .course-section h2, .page-template-membership .membership-section h2 {
+  -webkit-transform-origin: 113px 122px 0px;
+          transform-origin: 113px 122px 0px;
+}
+
+.course-section:nth-type(2) h2, .membership-section:nth-type(2) h2 {
+  -webkit-transform-origin: 158px 166px 0px;
+          transform-origin: 158px 166px 0px;
+}
+
+.course-section:last-of-type h2, .membership-section:last-of-type h2 {
+  -webkit-transform-origin: 136px 145px 0px;
+          transform-origin: 136px 145px 0px;
+}
+
+.course-section h3, .membership-section h3 {
   color: #a10e27;
   font-size: 30px;
   margin-bottom: 10px;
+  text-transform: uppercase;
+  margin: 0;
 }
 
-.course-section a {
+.course-section .list-group, .membership-section .list-group {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 58px;
+}
+
+.course-section a:not(.list-group-item), .membership-section a:not(.list-group-item) {
   font-weight: 700;
   text-decoration: underline;
+  text-transform: uppercase;
+  color: #2b2d42;
 }
 
-.course-section a:after {
+.course-section a:not(.list-group-item):hover, .membership-section a:not(.list-group-item):hover {
+  color: #a10e27;
+}
+
+.course-section a:not(.list-group-item):after, .membership-section a:not(.list-group-item):after {
   content: '';
-  background-image: url("../../images/icons/arrow_right.svg");
+  background-image: url("../../images/icons/arrow_right_red.svg");
   background-size: 100%;
   width: 15px;
   height: 15px;
   display: inline-block;
+  position: relative;
+  top: 3px;
+  margin-left: 10px;
 }
 
-.course-section .st0 {
-  fill: #a10e27;
+.course-section a.list-group-item-action, .membership-section a.list-group-item-action {
+  display: inline-block;
+  background: #9e8862;
+  color: #ccc1ad;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  width: 475px;
+  padding-top: 16px;
+}
+
+.course-section a.list-group-item-action.active, .course-section a.list-group-item-action:hover, .membership-section a.list-group-item-action.active, .membership-section a.list-group-item-action:hover {
+  background: #a10e27;
+  color: #fff;
+}
+
+.course-section-intro p, .membership-section-intro p {
+  color: #8a162b;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.course-1 {
+  margin-bottom: 78px;
 }
 
 .top-header {
@@ -20986,62 +21056,6 @@ ol li:before {
 
 .top-header.sps--blw {
   padding: 20px 0;
-}
-
-.banner {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  color: #fff;
-  position: relative;
-}
-
-.home .banner {
-  background-image: url("../../images/banners/nasp-home-banner.jpg");
-  height: 755px;
-}
-
-.banner-slider {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-.banner-slider-wrap {
-  padding: 57px 74px 60px;
-  border-left: 3px solid #a10e27;
-  border-right: 3px solid #a10e27;
-  border-top: 3px solid #a10e27;
-}
-
-.banner-slider-title {
-  font-size: 55px;
-  text-transform: uppercase;
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: .05em;
-  margin: 0.67em 0 6px;
-}
-
-.banner-slider-subtitle {
-  color: #9e8862;
-  font-family: "Overpass", sans-serif;
-  font-size: 20px;
-  line-height: 2.75;
-  letter-spacing: .1em;
-}
-
-.banner-interior {
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: cover;
-  background-color: #8b7455;
-  height: 319px;
-  margin-top: 96px;
-}
-
-.page-template-about-us .banner-interior {
-  background-image: url("../../images/banners/nasp-about-us-banner.jpg");
 }
 
 .events {
@@ -21141,6 +21155,74 @@ ol li:before {
 }
 
 /* purgecss start ignore */
+.banner {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+}
+
+.home .banner {
+  background-image: url("../../images/banners/nasp-home-banner.jpg");
+  height: 755px;
+}
+
+.banner-slider {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.banner-slider-wrap {
+  padding: 57px 74px 60px;
+  border-left: 3px solid #a10e27;
+  border-right: 3px solid #a10e27;
+  border-top: 3px solid #a10e27;
+}
+
+.banner-slider-title {
+  font-size: 55px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: .05em;
+  margin: 0.67em 0 6px;
+}
+
+.banner-slider-subtitle {
+  color: #9e8862;
+  font-family: "Overpass", sans-serif;
+  font-size: 20px;
+  line-height: 2.75;
+  letter-spacing: .1em;
+}
+
+.banner-interior {
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
+  background-color: #8b7455;
+  height: 319px;
+  margin-top: 96px;
+}
+
+.page-template-about-us .banner-interior {
+  background-image: url("../../images/banners/nasp-about-us-banner.jpg");
+}
+
+.page-template-online-events .banner-interior {
+  background-image: url("../../images/banners/factory-banner.jpg");
+}
+
+.page-template-membership .banner-interior {
+  background-image: url("../../images/banners/smokestack.jpg");
+}
+
+.post-type-archive-testimonial .banner-interior {
+  background-image: url("../../images/banners/gas-factory.jpg");
+}
+
 .sidebar-callout-offset {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21745,6 +21827,21 @@ footer .col-md-4 a.brand {
           flex: 0 1 calc(20% - 24px);
   -ms-flex-item-align: center;
       align-self: center;
+}
+
+.membership-section a.list-group-item-action {
+  font-size: 18px;
+  width: 234px;
+}
+
+.membership-note {
+  color: #001628;
+  margin: 28px 0 96px;
+}
+
+.membership-note strong {
+  color: #a10e27;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhc3NldHMvZGlzdC9jc3MvdGhlbWUuY3NzIiwic291cmNlUm9vdCI6IiJ9*/

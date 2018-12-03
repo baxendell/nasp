@@ -1,8 +1,8 @@
-.course-section {
+.course-section, .membership-section {
 	margin-top: 48px;
 	background: $beige;
 	position: relative;
-	padding: 75px 94px;
+	padding: 75px 94px 48px;
 
 	h2 {
 		position: absolute;
@@ -10,29 +10,93 @@
 		top: 68px;
 		color: #c6c5c5;
 		font-size: 30px;
+		transform: rotate(-90deg);
+		transform-origin: 155px 166px 0px;
+
+		.page-template-membership & {
+			transform-origin: 113px 122px 0px;
+		}
+	}
+
+	&:nth-type(2) {
+		h2 {
+			transform-origin: 158px 166px 0px;
+		}
+	}
+
+	&:last-of-type {
+		h2 {
+			transform-origin: 136px 145px 0px;
+		}
 	}
 
 	h3 {
 	 color: $red;
 	 font-size: 30px;
 	 margin-bottom: 10px;
+	 text-transform: uppercase;
+	 margin: 0;
+	}
+
+	.list-group {
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 58px;
 	}
 
 	a {
-		font-weight: 700;
-		text-decoration: underline;
+		&:not(.list-group-item) {
+			font-weight: 700;
+			text-decoration: underline;
+			text-transform: uppercase;
+			color: $text;
 
-		&:after {
-			content: '';
-			background-image: url('../../images/icons/arrow_right.svg');
-			background-size: 100%;
-			width: 15px;
-			height: 15px;
+			&:hover {
+				color: $red;
+			}			
+
+			&:after {
+				content: '';
+				background-image: url('../../images/icons/arrow_right_red.svg');
+				background-size: 100%;
+				width: 15px;
+				height: 15px;
+				display: inline-block;
+				position: relative;
+				top: 3px;
+				margin-left: 10px;
+			}
+		}
+
+		&.list-group-item-action {
 			display: inline-block;
+			background: $gold;
+			color: #ccc1ad;
+			text-transform: uppercase;
+			text-align: center;
+			font-size: 20px;
+			text-decoration: none;
+			border: none;
+			border-radius: 0;
+			width: 475px;
+			padding-top: 16px;
+
+			&.active, &:hover {
+				background: $red;
+				color: $white;
+			}
 		}
 	}
 
-	.st0 {
-		fill: $red;
+	&-intro {
+		p {
+			color: #8a162b;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
 	}
+}
+
+.course-1 {
+	margin-bottom: 78px;
 }
