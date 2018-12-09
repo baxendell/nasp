@@ -23,7 +23,7 @@ $ri_args = array(
 $children = new WP_Query($ri_args);
 if ($children->have_posts()):
 ?>
-<div class="related-info blue-border-box">
+<div class="related-info">
 
 	<h3>Related Information</h3>
 
@@ -62,7 +62,7 @@ $args = array(
 if( $post_objects ) :
 ?>
 
-<div class="useful-info blue-border-box">
+<div class="useful-info">
 
 	<?php if( $title ) : ?>
 
@@ -293,10 +293,10 @@ add_action( 'cws_locations_served', 'cws_locations_served_sidebar' );
  *
  * @return void
  */
-function cws_category_sidebar_output() {
+function nasp_category_sidebar_output() {
 ?>
 
-<div class="locations-served-holder blue-border-box offset-box__block">
+<div class="blog-category">
 
 	<div class="search-wrap">
 
@@ -304,105 +304,77 @@ function cws_category_sidebar_output() {
 
 	</div>
 
-	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	<?php $rArgs = array (
+		'post_type' => 'post',
+		'posts_per_page' => 4,
+	);
 
-		<div class="ac-list panel">
+	$rQuery = new WP_Query($rArgs);
+	if($rQuery->have_posts()):
+	?>	
 
-			<div class="ac-title-wrapper" role="tab" id="heading_cat">
+	<div class="recent-posts-sb">
 
-				<a id="ac_cat" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_cat" aria-expanded="true" aria-controls="collapse_cat">
-					<span class="ac-title">Categories</span>
-				</a>
+		<h3>Recent Posts</h3>
 
-			</div><!--ac-list-wrapper-->
+		<ul>
+			<?php while($rQuery->have_posts()): $rQuery->the_post(); ?>
 
-			<div id="collapse_cat" class="panel-collapse collapse ac" role="tabpanel" aria-labelledby="heading_cat">
+				<li><a href="<?php the_permalink() ?>"><?php the_title() ?></a></li>
 
-				<div class="panel-body">
+			<?php endwhile ?>
 
-					<ul>
+		</ul>
 
-						<?php
-							$args = array(
-								'show_option_all'    => '',
-								'orderby'            => 'name',
-								'order'              => 'ASC',
-								'style'              => 'list',
-								'show_count'         => 0,
-								'hide_empty'         => 1,
-								'use_desc_for_title' => 1,
-								'child_of'           => 0,
-								'feed'               => '',
-								'feed_type'          => '',
-								'feed_image'         => '',
-								'exclude'            => '',
-								'exclude_tree'       => '',
-								'include'            => '',
-								'hierarchical'       => 1,
-								'title_li'           => __( '' ),
-								'show_option_none'   => __( '' ),
-								'number'             => 25,
-								'echo'               => 1,
-								'depth'              => 0,
-								'current_category'   => 0,
-								'pad_counts'         => 0,
-								'taxonomy'           => 'category',
-								'walker'             => null
-							);
-							wp_list_categories( $args );
-						?>
+	</div>
 
-					</ul>
-
-				</div><!--.panel-body-->
-
-			</div><!--#collapse_cat-->
+	<?php wp_reset_postdata(); endif; ?>
 
 
-			<div class="ac-title-wrapper" role="tab" id="heading_arch">
+	<div class="category-sb">
 
-				<a id="ac_arch" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_arch" aria-expanded="true" aria-controls="collapse_arch">
-					<span class="ac-title">Archive</span>
-				</a>
+		<h3>Category</h3>
 
-			</div><!--ac-list-wrapper-->
+		<ul>
 
-			<div id="collapse_arch" class="panel-collapse collapse ac" role="tabpanel" aria-labelledby="heading_arch">
+			<?php
+				$args = array(
+					'show_option_all'    => '',
+					'orderby'            => 'name',
+					'order'              => 'ASC',
+					'style'              => 'list',
+					'show_count'         => 1,
+					'hide_empty'         => 1,
+					'use_desc_for_title' => 1,
+					'child_of'           => 0,
+					'feed'               => '',
+					'feed_type'          => '',
+					'feed_image'         => '',
+					'exclude'            => '',
+					'exclude_tree'       => '',
+					'include'            => '',
+					'hierarchical'       => 1,
+					'title_li'           => __( '' ),
+					'show_option_none'   => __( '' ),
+					'number'             => 25,
+					'echo'               => 1,
+					'depth'              => 0,
+					'current_category'   => 0,
+					'pad_counts'         => 0,
+					'taxonomy'           => 'category',
+					'walker'             => null
+				);
+				wp_list_categories( $args );
+			?>
 
-				<div class="panel-body">
+		</ul>
 
-					<ul>
+	</div>
 
-						<?php
-							$args = array(
-								'type'            => 'yearly',
-								'limit'           => 5,
-								'format'          => 'html', 
-								'before'          => '',
-								'after'           => '',
-								'show_post_count' => false,
-								'echo'            => 1,
-								'order'           => 'DESC',
-								'post_type'       => 'post'
-							);
-							wp_get_archives( $args );
-						?>
-
-					</ul>
-
-				</div><!--.panel-body-->
-
-			</div><!--#collapse_arch-->
-
-		</div><!--.ac-list-->
-
-	</div><!--.panel-group-->
-
-</div><!--.locations-served-holder-->
 
 <?php
 }
-add_action( 'cws_category_sidebar', 'cws_category_sidebar_output' );
+add_action( 'nasp_category_sidebar', 'nasp_category_sidebar_output' );
 
 /**
  * Meet Team sidebar

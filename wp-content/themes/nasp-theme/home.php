@@ -4,42 +4,47 @@
  */
 get_header() ?>
 
-	<section id="blog">
+<section id="blog" class="main">
 
-		<div class="container">
+	<div class="container">
 
-			<div class="inner-wrapper row">
+		<div class="row">
 
-				<div class="content col-md-8">
-	            
-        			<h1 class="page-title">Client Name</h1>
+			<div class="col text-center">
+            
+				<header>
+					<h1 class="headline"><?php h1_title('463') ?></h1>
+					<h2 class="subtitle"><?php the_field('subtitle', 463) ?></h2>
+				</header>
 
-					<div class="inner-content">
-
-						<?php get_template_part( 'partials/excerpt-loop' ) ?>
-
-					</div><!--.inner-content-->
-
-					<div class="blog-pagination">
-
-						<?php do_action( 'cws_pagination' ) ?>
-
-					</div><!--.blog-pagination-->
-
-				</div><!--.content-->
-
-				<aside id="sidebar" class="col-md-4">
-
-					<?php get_template_part( 'sidebars/blog-sidebar' ) ?>
-
-				</aside><!--#sidebar-->
-	            
-	            <div class="clearfix"></div>
-
-			</div><!--.row-->
+			</div>
 
 		</div>
 
-	</section><!--.container-->
+		<div class="row">
+
+			<div class="col-md-8">
+
+				<?php get_template_part( 'partials/excerpt-loop' ) ?>
+
+				<div class="blog-pagination">
+
+					<?php do_action( 'cws_pagination' ) ?>
+
+				</div><!--.blog-pagination-->
+
+			</div>
+
+			<aside id="sidebar" class="col-md-4">
+
+				<?php get_template_part( 'sidebars/blog-sidebar' ) ?>
+
+			</aside><!--#sidebar-->
+            
+		</div><!--.row-->
+
+	</div>
+
+</section><!--.container-->
 
 <?php get_footer() ?>

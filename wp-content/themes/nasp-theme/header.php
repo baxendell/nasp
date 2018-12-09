@@ -86,6 +86,8 @@
 
 							<ul class="navbar-social list-inline">
 
+								<li><a href="#">Client Login</a></li>
+
 								<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 
 								<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
@@ -112,7 +114,7 @@
 			
 			</div>
 
-			<?php get_template_part('partials/banner') ?>
+			<?php if(!is_page_template('contact.php')) { get_template_part('partials/banner'); } ?>
 
 		</header>
 		

@@ -19,14 +19,10 @@ $featured_img_url = get_the_post_thumbnail_url('330','full');
 
 				<header>
 					<h1 class="headline"><?php h1_title('330') ?></h1>
-					<h2 class="subtitle"><?php the_field('subtitle', '330') ?></h2>
+					<h2 class="subtitle"><?php the_field('subtitle', 330) ?></h2>
 				</header>
 
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post() ?>
-
-					<?php echo $content ?>
-
-				<?php endwhile; endif; ?>
+				<?php echo $content ?>
 
 			</article>
 
@@ -38,45 +34,52 @@ $featured_img_url = get_the_post_thumbnail_url('330','full');
 
 		</div>
 
-	</div>
+		<div id="testimonial-archive" itemscope itemtype="http://schema.org/Review">
 
-</section>
+			<meta itemprop="itemReviewed" content="NASP" />
 
-<section id="testimonial-archive" itemscope itemtype="http://schema.org/Review">
+			<div class="row no-gutters justify-content-center">
 
-	<div class="container">
+			<?php if(have_posts() ) : ?>
 
-		<meta itemprop="itemReviewed" content="NASP" />
+				<?php while( have_posts() ) : the_post() ?>		
 
-		<div class="row no-gutters justify-content-center">
+				<div class="col-md-5 testimonials-item-wrapper testimonials">
 
-		<?php if(have_posts() ) : ?>
+					<div class="testimonials-item">
 
-			<?php while( have_posts() ) : the_post() ?>		
+						<i>“</i>
 
-			<div class="col-md-5">
+						<?php the_content() ?>
 
-				<div class="testimonials-item">
+						<cite>- <?php the_title() ?></cite>
 
-					<i>“</i>
-
-					<?php the_content() ?>
-
-					<cite>- <?php the_title() ?></cite>
+					</div>
 
 				</div>
-
-			</div>
 				<?php endwhile ?>
 
 			<?php endif; wp_reset_postdata() ?>
 
-			<?php do_action( 'cws_pagination' ) ?>
+			</div>
+
+			<div class="row">
+
+				<div class="col">
+
+					<?php do_action( 'cws_pagination' ) ?>
+
+				</div>
+
+			</div>
+
 
 		</div>
 
 	</div>
 
 </section>
+
+<?php get_template_part('partials/in-the-know') ?>
 
 <?php get_footer() ?>

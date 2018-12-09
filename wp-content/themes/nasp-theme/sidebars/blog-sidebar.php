@@ -13,9 +13,7 @@
 
 	<ul class="sidebar-widgets">
 
-		<li class="siderbar-item"><?php do_action( 'cws_category_sidebar' ) ?></li>
-
-		<li class="siderbar-item"><?php do_action( 'cws_form_sidebar' ) ?></li>
+		<li class="siderbar-item"><?php do_action( 'nasp_category_sidebar' ) ?></li>
 
 	</ul>
 

@@ -675,6 +675,23 @@ td {
     }
 }
 
+.visible {
+    &-xs {
+        display: none;
+        @media screen and (max-width: 767px) {
+            display: block;
+        }
+    }
+}
+
+.hidden {
+    &-xs {
+        @media screen and (max-width: 767px) {
+            display: none;
+        }    
+    }
+}
+
 
 .center-col {
     float: none;

@@ -52,8 +52,18 @@
 		opacity: .5;
 		padding: 38px 98px;
 		box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.75); 
-
+		min-height: 375px;
+		
 		&.slick-current {
+			opacity: 1;
+		}
+
+		&-wrapper {
+			margin: 0 15px 30px;
+		}
+
+		.post-type-archive-testimonial & {
+			height: 100%;
 			opacity: 1;
 		}
 	}

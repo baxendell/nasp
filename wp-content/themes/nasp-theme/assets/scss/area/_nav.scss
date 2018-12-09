@@ -4,7 +4,8 @@
 	
 	&-nav {
 		flex-direction: row;
-
+		justify-content: end;
+		
 		>li {
 			>a {
 				color: $white;
@@ -19,6 +20,7 @@
 
 				&:after {
 					position: absolute;
+					bottom: 6px;
 					width: 100%;
 					height: 3px;
 					background: transparent;
@@ -33,6 +35,40 @@
 					}
 				}
 			}
+
+			&.show {
+				>a {
+					&:after {
+						background: $red;
+					}
+				}
+			}
+		}
+
+		.dropdown-menu {
+			position: absolute;
+			background: #001628;
+			border: none;
+			border-radius: 0;
+
+			@media screen and (min-width: 992px) {
+				min-width: 320px;
+			}
+
+			 li {
+				 a {
+					font-size: 14px;
+					color: $white;
+					text-transform: uppercase;
+					display: block;
+					border-bottom: 1px solid $text;
+					padding: 10px 10px 10px 8px;
+
+					&:hover, &:focus {
+						border-color: $red;
+					}
+				}
+			}
 		}
 	}
 
@@ -41,6 +77,18 @@
 		justify-content: end;
 		width: 100%;
 		margin-bottom: 15px;
+
+		li {
+			&:first-of-type {
+				a {
+					color: $gold;
+
+					&:hover,&:focus {
+						color: $red;
+					}
+				}
+			}
+		}
 
 		a {
 			color: #7e8fa6;

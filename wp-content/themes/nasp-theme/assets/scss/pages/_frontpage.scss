@@ -211,6 +211,11 @@
 			margin-bottom: 1.3em;
 		}
 
+		img {
+			float: left;
+			margin-right: 15px;
+		}
+
 		p { 
 			font-size: 17px; 
 			width: 100%; 
@@ -433,8 +438,12 @@
 		flex-flow: row wrap;
 		margin: 24px;
 		li {
-			flex: 0 1 calc(20% - 24px);
+			flex: 0 1 calc(22% - 24px);
 			align-self: center;
+
+			@media screen and (min-width: 1200px) {
+				flex: 0 1 calc(20% - 24px);
+			}
 		}
 	}
 }
