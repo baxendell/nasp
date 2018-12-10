@@ -14,7 +14,9 @@
 		background-color: #001628;
 
 		.home & {
-			background-color: transparent;
+			@media screen and (min-width: 992px) {
+				background-color: transparent;
+			}
 		}
 
 		&.sps--blw {

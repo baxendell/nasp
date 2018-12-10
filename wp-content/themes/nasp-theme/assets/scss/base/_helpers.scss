@@ -682,6 +682,24 @@ td {
             display: block;
         }
     }
+    &-sm {
+        display: none;
+        @media screen and (max-width: 767px) {
+            display: block;
+        }
+    }
+    &-md {
+        display: none;
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            display: block;
+        }
+    }
+    &-lg {
+        display: none;
+        @media screen and (min-width: 992px) {
+            display: block;
+        }
+    }
 }
 
 .hidden {
@@ -690,6 +708,26 @@ td {
             display: none;
         }    
     }
+    &-sm {
+        @media screen and (max-width: 767px) {
+            display: none;
+        }    
+    }
+    &-md {
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            display: none;
+        }    
+    }
+    &-lg {
+        @media screen and (min-width: 992px) and (max-width: 1199px) {
+            display: none;
+        }    
+    }
+    &-xl {
+        @media screen and (min-width: 1200px) {
+            display: none;
+        }    
+    }    
 }
 
 

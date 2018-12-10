@@ -15,6 +15,35 @@ get_header();
 
 		<div class="row">
 
+			<div class="offset-video col-lg-7 text-sm-center text-lg-right">
+
+				<a href="#" data-toggle="modal" data-target="#exampleModalCenter">
+
+					<?php $vImg = get_field('video_image'); ?>
+
+					<img src="<?php echo $vImg['url'] ?>" alt="<?php echo $vImg['alt'] ?>"/>
+
+				</a>
+
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				  <div class="modal-dialog modal-dialog-centered" role="document">
+				    <div class="modal-content">
+				      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+			          </button>
+
+				      <div class="modal-body">
+				        <?php the_field('video_embed') ?>
+				      </div>
+
+				    </div>
+				  </div>
+				</div>
+
+			</div>
+
+
 			<div class="col-lg-9">
 
 				<div class="border-content">
@@ -37,34 +66,6 @@ get_header();
 
 				</div>
 
-			</div>
-
-		</div>
-
-		<div class="offset-video col-lg-7 text-right">
-
-			<a href="#" data-toggle="modal" data-target="#exampleModalCenter">
-
-				<?php $vImg = get_field('video_image'); ?>
-
-				<img src="<?php echo $vImg['url'] ?>" alt="<?php echo $vImg['alt'] ?>"/>
-
-			</a>
-
-			<!-- Modal -->
-			<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-			  <div class="modal-dialog modal-dialog-centered" role="document">
-			    <div class="modal-content">
-			      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			          <span aria-hidden="true">&times;</span>
-		          </button>
-
-			      <div class="modal-body">
-			        <?php the_field('video_embed') ?>
-			      </div>
-
-			    </div>
-			  </div>
 			</div>
 
 		</div>

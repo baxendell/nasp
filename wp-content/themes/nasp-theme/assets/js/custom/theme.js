@@ -2,6 +2,31 @@ jQuery(document).ready(function ($) {
 
     var nasp = (function () {
 
+        var mobileNav = function() {
+
+            //Full Screen Menu
+            $(".nav-opener").on("click", function () {
+                $(".full-screen-menu").addClass("nav-active");
+                $('.full-screen-menu-close').delay(400).queue(function () {
+                    $(this).addClass("close-active").dequeue();
+                });
+            });
+
+            $(".full-screen-menu-close").on("click", function () {
+                $(this).removeClass("close-active");
+                $(".full-screen-menu").delay(250).queue(function () {
+                    $(this).removeClass("nav-active").dequeue();
+                });
+            });
+
+            /* Menu */
+            $(".full-screen-menu-content-menu .dropdown a").click(function () {
+                $('.dropdown > ul').not($(this).siblings('ul')).slideUp();
+                $(this).siblings('.dropdown-menu').slideToggle();
+            });
+
+        };
+
         var slick = function () {
 
            // Banner SLIDER
@@ -406,13 +431,13 @@ jQuery(document).ready(function ($) {
 
             }
         
-
         };
 
 
         return {
 
             init: function () {
+                mobileNav();
                 slick();
                 cards();
             }

@@ -1,8 +1,12 @@
 .border-content {
-	padding: 57px 74px 60px;
-	border-left: 3px solid $red;
-	border-right: 3px solid $red;
-	border-bottom: 3px solid $red;
+	padding: 15px 30px;
+
+	@media screen and (min-width: 992px) {
+		border-left: 3px solid $red;
+		border-right: 3px solid $red;
+		border-bottom: 3px solid $red;
+		padding: 57px 74px 60px;
+	}
 
 	.btn {
 		position: absolute;
@@ -13,9 +17,18 @@
 }
 
 .offset-video {
-	position: absolute;
-	right: -50px;
-	bottom: -52px;
+	z-index: 1;
+
+	@media screen and (max-width: 991px) {
+		margin-top: -46px;
+		margin-bottom: 15px;
+	}
+
+	@media screen and (min-width: 992px) {
+		position: absolute;
+		right: -50px;
+		bottom: -52px;	
+	}
 
 	img {
 		box-shadow: 13px 7px 15px 0px rgba(0, 0, 0, 0.2);
@@ -27,11 +40,16 @@
 		height: 72px;
 		position: absolute;
 		top: 50%;
-		transform: translateY(-50%);
-		left: 215px;
+		transform: translateY(-50%) translateX(-50%);
+		left: 50%;
 		background: url('../../images/icons/play-icon.svg');
 		z-index: 2;
 		pointer-events: none;
+
+		@media screen and (min-width: 992px) {
+			left: 215px;
+			transform: translateY(-50%);
+		}
 	}
 }
 

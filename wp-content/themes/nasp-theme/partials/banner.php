@@ -14,31 +14,43 @@ if(is_front_page()):
 
 			<div class="banner-slider-container col-lg-9">
 
-				<div class="banner-slider-nav"></div>
+			 	<div class="d-lg-none text-center">
 
-				<div class="banner-slider-wrap">
+			 		<h1 class="banner-slider-title"><?php the_field('h1_title') ?></h1>
 
-					<div class="banner-slider-item">
+			 		<h2 class="banner-slider-subtitle"><?php the_field('first_slide_subtitle') ?></h2>
 
-						<h1 class="banner-slider-title"><?php the_field('h1_title') ?></h1>
+		 		</div>
 
-						<h2 class="banner-slider-subtitle"><?php the_field('first_slide_subtitle') ?></h2>
+				<div class="d-none d-lg-block">
 
-					</div>
+					<div class="banner-slider-nav"></div>
 
-					<div class="banner-slider-item">
+					<div class="banner-slider-wrap">
 
-						<h2 class="banner-slider-title"><?php the_field('second_slide_subtitle') ?></h2>
+						<div class="banner-slider-item">
 
-						<h3 class="banner-slider-subtitle"><?php the_field('second_slide_subtitle') ?></h3>
+							<h1 class="banner-slider-title"><?php the_field('h1_title') ?></h1>
 
-					</div>
+							<h2 class="banner-slider-subtitle"><?php the_field('first_slide_subtitle') ?></h2>
 
-					<div class="banner-slider-item">
+						</div>
 
-						<h2 class="banner-slider-title"><?php the_field('third_slide_subtitle') ?></h2>
+						<div class="banner-slider-item">
 
-						<h3 class="banner-slider-subtitle"><?php the_field('third_slide_subtitle') ?></h3>
+							<h2 class="banner-slider-title"><?php the_field('second_slide_subtitle') ?></h2>
+
+							<h3 class="banner-slider-subtitle"><?php the_field('second_slide_subtitle') ?></h3>
+
+						</div>
+
+						<div class="banner-slider-item">
+
+							<h2 class="banner-slider-title"><?php the_field('third_slide_subtitle') ?></h2>
+
+							<h3 class="banner-slider-subtitle"><?php the_field('third_slide_subtitle') ?></h3>
+
+						</div>
 
 					</div>
 
@@ -59,7 +71,7 @@ if(is_front_page()):
 
 			?>
 
-			<div class="col-lg-3 events">
+			<div class="col-lg-3 events d-none d-lg-block">
 
 				<?php while($e_query->have_posts()): $e_query->the_post(); ?>
 

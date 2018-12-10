@@ -12,8 +12,12 @@
 
 	&-slider {
 		position: absolute;
-		bottom: 0;
+		bottom: 75px;
 		width: 100%;
+
+		@media screen and (min-width: 992px) {
+			bottom: 0;
+		}
 
 		&-wrap {
 			padding: 57px 74px 60px;
