@@ -39,7 +39,7 @@
 
 					<div class="row align-items-center justify-content-between no-gutters">
 
-			            <div class="logo text-center-xs col-md-6 col-lg-3" itemscope itemtype="http://schema.org/Organization">
+			            <div class="logo text-center-xs col-5 col-md-6 col-lg-3" itemscope itemtype="http://schema.org/Organization">
 
 			                <a href="/" itemprop="url">
 
@@ -51,7 +51,7 @@
 
 						<?php if(wp_is_mobile()): ?>
 
-						<div id="m-toggle" class="header-top-wrap visible-xs visible-sm visible-md affix">
+						<div id="m-toggle" class="header-top-wrap d-lg-none affix">
 
 							<nav id="mobile-nav" class="mobile-nav-links-container">
 
@@ -69,7 +69,7 @@
 
 						<?php endif ?>
 
-						<nav id="nav" class="navbar col-lg-9 col-xl-auto hidden-xs hidden-sm hidden-md">
+						<nav id="nav" class="navbar col-lg-9 col-xl-auto d-none d-lg-block">
 
 							<ul class="navbar-social list-inline">
 

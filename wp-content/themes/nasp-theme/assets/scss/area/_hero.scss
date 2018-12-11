@@ -6,8 +6,16 @@
 	position: relative;
 
 	.home & {
-		background-image: url('../../images/banners/nasp-home-banner.jpg');
-		height: 755px;
+		background-image: url('../../images/banners/nasp-home-banner-sm.jpg');
+		height: 420px;
+
+		@media screen and (min-width: 481px) {
+			background-image: url('../../images/banners/nasp-home-banner.jpg');
+		}
+
+		@media screen and (min-width: 768px) {
+			height: 755px;
+		}
 	}
 
 	&-slider {
@@ -27,21 +35,29 @@
 		}
 
 		&-title {
-			font-size: 55px;
+			font-size: 28px;
 			text-transform: uppercase;
 			font-weight: 500;
 			line-height: 1;
 			letter-spacing: .05em;
-			margin: 0.67em 0 6px
+			margin: 0.67em 0 6px;
+
+			@media screen and (min-width: 768px) {
+				font-size: 55px;
+			}
 		}
 
 		&-subtitle {
 			color: $gold;
 			font-family: $default-font;
-			font-size: 20px;
+			font-size: 14px;
 			line-height: 2.75;
 			letter-spacing: .1em;
-		}
+
+			@media screen and (min-width: 768px) {
+				font-size: 20px;
+			}
+		}	
 	}
 
 	&-interior {

@@ -62,6 +62,14 @@ jQuery(document).ready(function ($) {
                 prevArrow: '<i class="fal fa-arrow-circle-left"></i>',
                 nextArrow: '<i class="fal fa-arrow-circle-right"></i>', 
                 dots: false,
+                responsive: [
+                    {
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 3,
+                        }
+                    }
+                ]
             });                       
 
         };

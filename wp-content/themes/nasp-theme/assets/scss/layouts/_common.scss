@@ -53,10 +53,19 @@
 
 .split-bg {
 	background-image: url('../../images/backgrounds/grid-bg.jpg');
-	padding: 89px 0 14px;
+	padding: 0 0 14px;
 	position: relative;
+
+	@media screen and (min-width: 992px) {
+		padding: 89px 0 14px;
+	}
+
 	* {
 		color: $white;
+	}
+
+	>img {
+		margin-bottom: 45px;
 	}
 
 	&:before {
@@ -76,17 +85,21 @@
 		}
 	}
 
-	&.home-section-3 {
-		&:before {
-			background-image: url('../../images/backgrounds/hard-hat-bg.jpg');
-		}
-	}
+	@media screen and (min-width: 992px) {
 
-	&.home-section-5 {
-		&:before {
-			background-image: url('../../images/backgrounds/beam-bg.jpg');
+		&.home-section-3 {
+			&:before {
+				background-image: url('../../images/backgrounds/hard-hat-bg.jpg');
+			}
 		}
-	}	
+
+		&.home-section-5 {
+			&:before {
+				background-image: url('../../images/backgrounds/beam-bg.jpg');
+			}
+		}	
+
+	}
 
 	h2 {
 		line-height: 1;

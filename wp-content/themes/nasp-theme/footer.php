@@ -3,7 +3,7 @@
 
       <div class="container">
 
-        <div class="row align-items-center justify-content-between">
+        <div class="row align-items-center justify-content-between text-center-sm">
 
           <div class="col-lg-7 col-xl-5">
 
@@ -13,7 +13,7 @@
 
           </div>
 
-          <div class="col-md-4 text-right">
+          <div class="col-lg-4 text-right-md">
 
             <a href="#">Client Login</a>
 

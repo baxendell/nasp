@@ -19,7 +19,7 @@
 
           <div class="row align-items-center justify-content-center">
 
-            <div class="col-md-3">
+            <div class="col-lg-3">
 
               <div class="clients-title">
 
@@ -29,7 +29,7 @@
 
             </div>
 
-            <div class="col-md-8">
+            <div class="col-lg-8">
 
               <ul class="clients-list justify-content-between">
 

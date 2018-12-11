@@ -48,9 +48,9 @@ get_header();
 
 				<div class="border-content">
 
-					<div class="row no-gutters">
+					<div class="row">
 
-						<div class="col-lg-7 offset-xl-1 col-xl-5">
+						<div class="col-lg-7 offset-xl-1 col-xl-5 text-center-sm px-md-0">
 
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post() ?>
 
@@ -78,6 +78,10 @@ get_header();
 
 <section class="home-section-3 split-bg">
 
+	<img class="d-none d-sm-block d-lg-none" src="<?php bloginfo('template_url') ?>/assets/images/backgrounds/hard-hat-bg.jpg"/>
+
+	<img class="d-sm-none" src="<?php bloginfo('template_url') ?>/assets/images/backgrounds/hard-hat-bg-sm.jpg"/>
+
 	<div class="container">
 
 		<div class="row justify-content-end">
@@ -100,9 +104,9 @@ get_header();
 
 	<div class="container">
 
-		<div class="row align-items-center justify-content-around no-gutters">
+		<div class="row align-items-center justify-content-around">
 
-			<div class="col-12">
+			<div class="col-12 px-md-0">
 
 				<?php the_field('section_4_text') ?>
 
@@ -116,6 +120,10 @@ get_header();
 
 <section class="home-section-5 split-bg">
 
+	<img class="d-none d-sm-block d-lg-none" src="<?php bloginfo('template_url') ?>/assets/images/backgrounds/beam-bg.jpg"/>
+
+	<img class="d-sm-none" src="<?php bloginfo('template_url') ?>/assets/images/backgrounds/beam-bg-sm.jpg"/>
+
 	<div class="container">
 
 		<div class="row justify-content-end">
@@ -126,7 +134,7 @@ get_header();
 
 				<?php the_field('certifications_text') ?>
 
-				<div class="text-center">
+				<div class="text-center d-none d-lg-block">
 
 					<a class="btn btn-1" href="#">Learn More</a>
 					
