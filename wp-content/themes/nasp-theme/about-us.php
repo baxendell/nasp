@@ -9,7 +9,7 @@ get_header() ?>
 
 		<div class="row no-gutters">
 
-			<article class="offset-md-1 col-md-6 pr-5">
+			<article class="col-md-7 offset-lg-1 col-lg-6 pr-lg-5">
 
 				<header>
 					<h1 class="headline"><?php h1_title() ?></h1>
@@ -42,7 +42,7 @@ get_header() ?>
 
 		<div class="row justify-content-around">
 
-			<div class="col-5">
+			<div class="col-sm-5">
 
 				<?php the_field('section_2_left') ?>
 
@@ -50,7 +50,7 @@ get_header() ?>
 
 			</div>
 
-			<div class="col-5">
+			<div class="col-sm-5">
 
 				<?php the_field('section_2_right') ?>
 
@@ -70,7 +70,7 @@ get_header() ?>
 
 		<div class="row no-gutters">
 
-			<aside class="col-md-5">
+			<aside class="col-md-5 d-none d-lg-block">
 
 				<?php $sImg = get_field('section_3_side_image') ?>
 
@@ -88,7 +88,7 @@ get_header() ?>
 
 			</aside>
 
-			<article class="offset-md-1 col-md-6 pl-5">
+			<article class="col offset-lg-1 col-lg-6 pl-lg-5">
 
 				<header>
 					<h2 class="headline"><?php the_field('section_3_title') ?></h2>

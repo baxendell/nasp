@@ -32,7 +32,7 @@ if($e_query->have_posts()):
 				}
 			 ?>
 
-			<div class="col-md-4 <?php echo $first ?>">
+			<div class="col-lg-4 <?php echo $first ?>">
 
 				<div class="upcoming-events-item">
 

@@ -463,9 +463,11 @@
 	padding-bottom: 56px;
 
 	.container {
-		background-repeat: no-repeat;
-		background-image: url('../../images/bottom-card-shadow.png');
-		background-position: center top;
+		@media screen and (min-width: 992px) {
+			background-repeat: no-repeat;
+			background-image: url('../../images/bottom-card-shadow.png');
+			background-position: center top;
+		}
 	}
 
 	.row {
