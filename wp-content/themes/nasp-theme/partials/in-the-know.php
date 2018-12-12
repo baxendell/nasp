@@ -14,7 +14,7 @@
                             <div class="first_card">
                                 <div class="cards_container">
                                     <h3>Sign Up for the NASP Newsletter Now!</h3>
-                                    <p>Informative Articles. Stay up-to-date on upcoming courses. Never miss a special offer. Don't wait... Sign up today!</p>
+                                    <p class="d-none d-sm-block">Informative Articles. Stay up-to-date on upcoming courses. Never miss a special offer. Don't wait... Sign up today!</p>
 
                                     <?php get_template_part('partials/newsletter') ?>
                                 </div>

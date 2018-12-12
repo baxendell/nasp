@@ -142,9 +142,13 @@
 				position: absolute; 
 				background: #a5a6b1; 
 				width: 86%; 
-				left: 48px; 
+				left: 37px; 
 				top: 50px; 
 				height: 1px;
+
+				@media screen and (min-width: 768px) {
+					left: 48px; 
+				}
 
 				@media screen and (min-width: 992px) {
 					left: 65px; 
@@ -223,7 +227,11 @@
 	&_section {
 		width: 100%; 
 		position: relative; 
-		height: 394px;
+		height: 500px;
+
+		@media screen and (min-width: 768px) {
+			height: 394px;
+		}
 
 		@media screen and (min-width: 1200px) {
 			height: 360px;
@@ -255,6 +263,10 @@
 		img {
 			float: left;
 			margin-right: 15px;
+
+			@media screen and (max-width: 767px) {
+				display: none;
+			}
 		}
 
 		p { 
@@ -486,8 +498,12 @@
 		flex-flow: row wrap;
 		margin: 24px;
 		li {
-			flex: 0 1 calc(22% - 24px);
+			flex: 0 1 calc(40% - 24px);
 			align-self: center;
+
+			@media screen and (min-width: 768px) {
+				flex: 0 1 calc(22% - 24px);
+			}
 
 			@media screen and (min-width: 1200px) {
 				flex: 0 1 calc(20% - 24px);

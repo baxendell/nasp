@@ -68,6 +68,12 @@ jQuery(document).ready(function ($) {
                         settings: {
                             slidesToShow: 3,
                         }
+                    },
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 2,
+                        }
                     }
                 ]
             });                       

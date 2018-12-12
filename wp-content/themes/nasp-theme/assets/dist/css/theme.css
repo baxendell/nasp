@@ -21808,7 +21808,12 @@ footer .col-lg-4 a {
 footer .col-lg-4 a:first-of-type {
   text-transform: uppercase;
   text-decoration: underline;
-  margin-top: -16px;
+}
+
+@media screen and (min-width: 992px) {
+  footer .col-lg-4 a:first-of-type {
+    margin-top: -16px;
+  }
 }
 
 footer .col-lg-4 a.brand {
@@ -22174,9 +22179,15 @@ footer .col-lg-4 a.brand {
   position: absolute;
   background: #a5a6b1;
   width: 86%;
-  left: 48px;
+  left: 37px;
   top: 50px;
   height: 1px;
+}
+
+@media screen and (min-width: 768px) {
+  .card_list ul:before {
+    left: 48px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -22252,7 +22263,13 @@ footer .col-lg-4 a.brand {
 .cards_section {
   width: 100%;
   position: relative;
-  height: 394px;
+  height: 500px;
+}
+
+@media screen and (min-width: 768px) {
+  .cards_section {
+    height: 394px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -22292,6 +22309,12 @@ footer .col-lg-4 a.brand {
 .cards_container img {
   float: left;
   margin-right: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .cards_container img {
+    display: none;
+  }
 }
 
 .cards_container p {
@@ -22503,10 +22526,18 @@ footer .col-lg-4 a.brand {
 
 .clients-list li {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 calc(22% - 24px);
-          flex: 0 1 calc(22% - 24px);
+      -ms-flex: 0 1 calc(40% - 24px);
+          flex: 0 1 calc(40% - 24px);
   -ms-flex-item-align: center;
       align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .clients-list li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 calc(22% - 24px);
+            flex: 0 1 calc(22% - 24px);
+  }
 }
 
 @media screen and (min-width: 1200px) {

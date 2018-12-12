@@ -33,7 +33,10 @@ footer {
 			&:first-of-type {
 				text-transform: uppercase;
 				text-decoration: underline;	
-				margin-top: -16px;		
+
+				@media screen and (min-width: 992px) {
+					margin-top: -16px;	
+				}	
 			}
 
 			&.brand {
