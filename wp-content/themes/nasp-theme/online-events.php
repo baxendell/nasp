@@ -32,7 +32,7 @@ get_header() ?>
 
 		</div>
 
-		<div class="row no-gutters course-section">
+		<div id="professional-certs" class="row no-gutters course-section">
 
 			<h2>Professional Certifications</h2>
 
@@ -61,7 +61,7 @@ get_header() ?>
 
 		</div>
 
-		<div class="row no-gutters course-section">
+		<div id="coa" class="row no-gutters course-section">
 
 			<h2>Certificates of Achievement</h2>
 
@@ -79,7 +79,7 @@ get_header() ?>
 
 		</div>
 
-		<div class="row no-gutters course-section">
+		<div id="specialist-designations" class="row no-gutters course-section">
 
 			<h2>Specialist Designations:</h2>
 

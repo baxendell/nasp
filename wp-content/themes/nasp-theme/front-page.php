@@ -93,7 +93,7 @@ get_header();
 
 				<div class="text-center d-none d-lg-block">
 
-					<a class="btn btn-1" href="/development/online-courses/">Learn More</a>
+					<a class="btn btn-1" href="/development/online-courses/#professional-certs">Learn More</a>
 					
 				</div>
 

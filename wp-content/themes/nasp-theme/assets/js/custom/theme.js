@@ -471,7 +471,8 @@ jQuery(document).ready(function ($) {
          $(".modal").on('shown.bs.modal', function (ev) { 
             var $this2 = $(this); 
             var $frame2 = $this2.find('.modal-content iframe'); 
-            $frame2[0].src += "1"; 
+            //$frame2[0].src += "1"; 
+            $frame2.attr("src", $frame2.attr("src").replace("autoplay=0", "autoplay=1"))
          });
 
         //Stop video on play
