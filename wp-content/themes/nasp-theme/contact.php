@@ -41,20 +41,21 @@ get_header();
 
 					<p><strong>Mailing Only:</strong><br/>
 					PO Box 3367 <br/>
-					Wilmington NC 28406 </p>
+					Wilmington, NC 28406 </p>
 
 					<p><strong>FedEx/UPS/Express Shipping Only:</strong><br/>
 					3904 Oleander Drive<br/>
-					Wilmington NC 28403<br/>
-					Suite #101</p>
+					Suite #101<br/>
+					Wilmington, NC 28403<br/>
+					</p>
 
 					<ul class="contact-social row">
 
-						<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+						<li><a href="https://www.facebook.com/NASPweb" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 
-						<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="https://twitter.com/NASPweb" target="_blank"><i class="fab fa-twitter"></i></a></li>
 
-						<li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+						<li><a href="https://www.linkedin.com/showcase/nasp-courses/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
 
 					</ul>
 

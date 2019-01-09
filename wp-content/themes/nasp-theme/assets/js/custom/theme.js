@@ -26,6 +26,24 @@ jQuery(document).ready(function ($) {
             });
 
         };
+        
+        var search = function() {
+            $(".btn-search").on("click", function() {
+                $('.search-bar').toggleClass("active");
+                console.log('search click');
+            });
+        };
+
+        var onHashChange = function() {
+            var hash = window.location.hash;
+
+            if (hash) {
+                // using ES6 template string syntax
+                $(`[data-toggle="list"][href="${hash}"]`).trigger('click');
+            }
+        }
+
+        window.addEventListener('hashchange', onHashChange, false);
 
         var slick = function () {
 
@@ -33,7 +51,7 @@ jQuery(document).ready(function ($) {
             $(".banner-slider-wrap").slick({
                 slidesToShow: 1,
                 infinite: false,
-                autoplay: false,
+                autoplay: true,
                 slidesToScroll: 1,
                 arrows: false,
                 //appendArrows: '.practice-slider__arrows',                
@@ -447,13 +465,59 @@ jQuery(document).ready(function ($) {
         
         };
 
+        var autoPlay = function() {
+        // Play video on play
+
+         $(".modal").on('shown.bs.modal', function (ev) { 
+            var $this2 = $(this); 
+            var $frame2 = $this2.find('.modal-content iframe'); 
+            $frame2[0].src += "1"; 
+         });
+
+        //Stop video on play
+
+         $(".modal").on('hidden.bs.modal', function (e) { 
+            var $this = $(this); 
+            var $frame = $this.find('.modal-content iframe');
+            $frame.attr("src", $frame.attr("src").replace("autoplay=1", "autoplay=0"))
+            //$frame.attr("src", $frame.attr("src")); 
+         });
+
+        };
+
+        var reveal = function() {
+          $('.banner-slider').addClass('reveal');
+          console.log('reveal');
+        };
+
+        var faqScroll = function() {
+            $('.page-faq a[href*="#"]:not([href="#"])').click(function() {
+                var offset = -200; // <-- change the value here
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top + offset
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        }
+
 
         return {
 
             init: function () {
                 mobileNav();
+                search();
                 slick();
                 cards();
+                onHashChange();
+                autoPlay();
+                reveal();
+                faqScroll();
             }
 
         }

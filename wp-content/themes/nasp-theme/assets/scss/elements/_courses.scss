@@ -2,16 +2,29 @@
 	margin-top: 48px;
 	background: $beige;
 	position: relative;
-	padding: 75px 94px 48px;
+	padding: 35px 15px 48px;
+
+	@media screen and (min-width: 768px) {
+		padding: 75px 94px 48px;
+	}
 
 	h2 {
-		position: absolute;
-		left: 30px;
-		top: 68px;
 		color: #c6c5c5;
 		font-size: 30px;
-		transform: rotate(-90deg);
-		transform-origin: 155px 166px 0px;
+
+		@media screen and (max-width: 767px) {
+			text-align: center;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		@media screen and (min-width: 768px) {
+			position: absolute;
+			left: 30px;
+			top: 68px;		
+			transform: rotate(-90deg);
+			transform-origin: 155px 166px 0px;
+		}
 
 		.page-template-membership & {
 			transform-origin: 113px 122px 0px;
@@ -39,9 +52,13 @@
 	}
 
 	.list-group {
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-between;
 		margin-bottom: 58px;
+
+		@media screen and (min-width: 768px) {
+			flex-direction: row;
+		}
 	}
 
 	a {
@@ -54,18 +71,6 @@
 			&:hover {
 				color: $red;
 			}			
-
-			&:after {
-				content: '';
-				background-image: url('../../images/icons/arrow_right_red.svg');
-				background-size: 100%;
-				width: 15px;
-				height: 15px;
-				display: inline-block;
-				position: relative;
-				top: 3px;
-				margin-left: 10px;
-			}
 		}
 
 		&.list-group-item-action {
@@ -80,6 +85,15 @@
 			border-radius: 0;
 			width: 475px;
 			padding-top: 16px;
+
+			@media screen and (max-width: 767px) {
+				margin-bottom: 15px;
+				font-size: 18px;
+			}
+
+			@media screen and (min-width: 768px) and (max-width: 991px) {
+				height: 80px;
+			}
 
 			&.active, &:hover {
 				background: $red;
@@ -98,5 +112,7 @@
 }
 
 .course-1 {
-	margin-bottom: 78px;
+	@media screen and (min-width: 768px) {
+		margin-bottom: 78px;
+	}
 }

@@ -19,5 +19,42 @@
 		padding: 15px 34px 10px;
 		letter-spacing: .1em;
 		font-family: $heading-font;
+
+		.single-jobs & {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.facebook-icon {
+	background-image: url('../../images/icons/facebook-icon.png');
+	width: 8px;
+	height: 16px;
+}
+
+.twitter-icon {
+	background-image: url('../../images/icons/twitter-icon.png');
+	height: 13px;
+	width: 16px;
+}
+
+.linkedin-icon {
+	background-image: url('../../images/icons/linkedin-icon.png');
+	height: 14px;
+	width: 16px;
+}
+
+.search-icon {
+	background-image: url('../../images/icons/search-icon-white.png');
+	height: 16px;
+	width: 16px;
+}
+
+.facebook-icon, .twitter-icon, .linkedin-icon, .search-icon {
+	display: inline-block;
+	background-repeat: no-repeat;
+
+	&:hover, &:focus {
+		opacity: .7;
 	}
 }

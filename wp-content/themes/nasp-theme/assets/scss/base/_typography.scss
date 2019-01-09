@@ -74,12 +74,16 @@ ol {
 		padding-left: 38px;
 		position: relative;
 		margin-bottom: 35px;
-		font-size: 20px;
 		text-transform: uppercase;
-		height: 56px;
+		//height: 56px;
 		display: flex;
 		align-items: center;
 		padding-top: 12px;
+
+		.home-section-4 & {
+			font-size: 20px;
+			heght: 68px;
+		}
 		
 		&:before {
 			content: counter(li);
@@ -87,11 +91,15 @@ ol {
 			display: inline-block;
 			position: absolute;
 			left: 0;
-			top: 5px;
+			top: 12px;
 			font-size: 60px;
 			font-weight: 300;
 			line-height: 1;
 			font-family: $heading-font;
+
+			.home-section-4 & {
+				top: 5px;
+			}
 		}
 	}
 }

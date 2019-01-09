@@ -27,14 +27,15 @@ get_header();
 
 				<!-- Modal -->
 				<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-				  <div class="modal-dialog modal-dialog-centered" role="document">
+				  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 				    <div class="modal-content">
 				      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				          <span aria-hidden="true">&times;</span>
 			          </button>
 
 				      <div class="modal-body">
-				        <?php the_field('video_embed') ?>
+				        <?php //the_field('video_embed') ?>
+				        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/302093757?autoplay=0&color=9E8862&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 				      </div>
 
 				    </div>
@@ -62,53 +63,9 @@ get_header();
 
 					</div>
 
-					<a class="btn btn-1" href="#">Learn More</a>
+					<a class="btn btn-1" href="/about/">Learn More</a>
 
 				</div>
-
-			</div>
-
-		</div>
-
-	</div>
-
-    <?php get_template_part('partials/testimonials') ?>
-
-</section>
-
-<section class="home-section-3 split-bg">
-
-	<img class="d-none d-sm-block d-lg-none" src="<?php bloginfo('template_url') ?>/assets/images/backgrounds/hard-hat-bg.jpg"/>
-
-	<img class="d-sm-none" src="<?php bloginfo('template_url') ?>/assets/images/backgrounds/hard-hat-bg-sm.jpg"/>
-
-	<div class="container">
-
-		<div class="row justify-content-end">
-
-			<div class="col-lg-4 align-self-end">
-
-				<h2><?php the_field('section_3_title') ?></h2>
-
-				<?php the_field('section_3_text') ?>
-
-			</div>
-
-		</div>
-
-	</div>
-
-</section>
-
-<section class="home-section-4 solid-bg">
-
-	<div class="container">
-
-		<div class="row align-items-center justify-content-around">
-
-			<div class="col-12 px-md-0">
-
-				<?php the_field('section_4_text') ?>
 
 			</div>
 
@@ -136,9 +93,57 @@ get_header();
 
 				<div class="text-center d-none d-lg-block">
 
-					<a class="btn btn-1" href="#">Learn More</a>
+					<a class="btn btn-1" href="/development/online-courses/">Learn More</a>
 					
 				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+<section class="main">
+
+	<?php get_template_part('partials/testimonials') ?>
+
+</section>
+
+<section class="home-section-4 solid-bg">
+
+	<div class="container">
+
+		<div class="row align-items-center justify-content-around">
+
+			<div class="col-12 px-md-0">
+
+				<?php the_field('section_4_text') ?>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+<section class="home-section-3 split-bg">
+
+	<img class="d-none d-sm-block d-lg-none" src="<?php bloginfo('template_url') ?>/assets/images/backgrounds/hard-hat-bg.jpg"/>
+
+	<img class="d-sm-none" src="<?php bloginfo('template_url') ?>/assets/images/backgrounds/hard-hat-bg-sm.jpg"/>
+
+	<div class="container">
+
+		<div class="row justify-content-end">
+
+			<div class="col-lg-4 align-self-end">
+
+				<h2><?php the_field('section_3_title') ?></h2>
+
+				<?php the_field('section_3_text') ?>
 
 			</div>
 

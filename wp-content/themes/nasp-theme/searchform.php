@@ -8,5 +8,6 @@
 	            value="<?php echo esc_attr_x( 'Submit', 'submit button' ); ?>" />
 	        <i class="icon icon-search"></i>
         </div>
+
     </div>
 </form>

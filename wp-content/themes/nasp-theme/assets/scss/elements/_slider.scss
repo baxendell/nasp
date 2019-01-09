@@ -48,7 +48,7 @@
 	}
 
 	@media screen and (min-width: 992px) {
-		margin-top: 205px;
+		margin-top: 120px;
 		margin-bottom: 142px;
 	}
 
@@ -97,6 +97,10 @@
 		.post-type-archive-testimonial & {
 			height: 100%;
 			opacity: 1;
+
+			@media screen and (max-width: 991px) {
+				min-height: auto;
+			}
 		}
 	}
 

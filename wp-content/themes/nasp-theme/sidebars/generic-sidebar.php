@@ -13,15 +13,9 @@
 
 	<ul class="sidebar-widgets">
 
-		<?php if(is_post_type_archive('wpseo_locations')): ?>
-
-		<li class="siderbar-item"><?php do_action( 'cws_form_sidebar' ) ?></li>
-
-		<?php endif ?>
-
 		<li class="siderbar-item"><?php do_action( 'cws_related_info' ) ?></li>
 
-		<li class="siderbar-item"><?php do_action( 'cws_custom_sb' ) ?></li>
+		<li class="siderbar-item entry-content"><?php do_action( 'cws_custom_sb' ) ?></li>
 
   </ul>
 

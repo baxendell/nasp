@@ -20,20 +20,16 @@ $media-expressions: (
 
 @import 'vendors/include-media';
 
-/* purgecss start ignore */
-@import 'vendors/fontawesome5.min';
+@import 'vendors/fontawesome';
 @import 'vendors/slick';
 @import 'vendors/bootstrap/bootstrap';
-/* purgecss end ignore */
 
-/* purgecss start ignore */
 @import 'base/custom-bootstrap';
 @import 'base/reset';
-@import 'base/fonts';
 @import 'base/variables';
 @import 'base/functions';
 @import 'base/mixins';
-/* purgecss start ignore */
+
 @import 'base/helpers';
 @import 'base/global';
 @import 'base/typography';
@@ -41,19 +37,14 @@ $media-expressions: (
 @import 'layouts/common';
 @import 'elements/buttons';
 @import 'elements/form';
-@import 'elements/video';
-@import 'elements/accordions';
-@import 'elements/breadcrumbs';
-@import 'elements/pagination';
-/* purgecss start ignore */
-@import 'elements/faqs';
 @import 'elements/slider';
 @import 'elements/modals';
 @import 'elements/courses';
+@import 'elements/jobs';
+@import 'elements/social-share';
 
 @import 'area/header';
 @import 'area/nav';
-/* purgecss start ignore */
 @import 'area/hero';
 @import 'area/main';
 @import 'area/sidebar';
@@ -68,7 +59,6 @@ $media-expressions: (
 
 @import 'pages/about';
 @import 'pages/contact';
-/* purgecss start ignore */
 @import 'pages/blog';
 @import 'pages/page404';
 @import 'pages/single';

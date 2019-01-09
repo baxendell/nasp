@@ -28,20 +28,24 @@
 
 	</head>
 	<body <?php body_class( $classes ) ?>>
+
+	<?php
+	$url = home_url();
+	?>
 		<a href="#main-content" class="skiplink" tabindex="-1">Skip Navigation</a>
 		<!-- Google Tag Manager (noscript) -->
 
-		<header class="banner">
+		<header id="main-header" class="banner">
 
 			<div class="top-header sps" data-sps-offset="50">
 
 				<div class="container-fluid">
 
-					<div class="row align-items-center justify-content-between no-gutters">
+					<div class="row align-items-center justify-content-between no-gutters pos-rel">
 
 			            <div class="logo text-center-xs col-5 col-md-6 col-lg-3" itemscope itemtype="http://schema.org/Organization">
 
-			                <a href="/" itemprop="url">
+			                <a href="<?php echo $url ?>" itemprop="url">
 
 			                    <img itemprop="logo" class="img-responsive" src="<?php echo esc_url( get_stylesheet_directory_uri() ) ?>/assets/images/nasp-logo.png" alt="National Association of Safety Professionals">
 
@@ -73,15 +77,15 @@
 
 							<ul class="navbar-social list-inline">
 
-								<li><a href="#">Client Login</a></li>
+						          <li><a href="https://dynamic.naspweb.com/index.php/login/">Client Login</a></li>
 
-								<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+						          <li><a href="https://www.facebook.com/NASPweb" target="_blank"><i class="facebook-icon"></i></a></li>
 
-								<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+						          <li><a href="https://twitter.com/NASPweb" target="_blank"><i class="twitter-icon"></i></a></li>
 
-								<li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+						          <li><a href="https://www.linkedin.com/showcase/nasp-courses/" target="_blank"><i class="linkedin-icon"></i></a></li>
 
-								<li><button class="btn-search"><i class="far fa-search"></i></button></li>
+								<li><button class="btn-search"><i class="search-icon"></i></button></li>
 
 							</ul>
 
@@ -93,8 +97,10 @@
 
 							) ) ?>
 
-						</nav>			            
+						</nav>	
 
+						<div class="search-bar"><?php get_search_form( ) ?></div>
+		            
 				  	</div>
 				
 				</div>
@@ -135,14 +141,15 @@
 
 								<ul class="navbar-social navbar-social__full-screen list-inline">
 
-									<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+						          	<li><a href="https://dynamic.naspweb.com/index.php/login/">Client Login</a></li>
 
-									<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+						          	<li><a href="https://www.facebook.com/NASPweb" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 
-									<li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+						          	<li><a href="https://twitter.com/NASPweb" target="_blank"><i class="fab fa-twitter"></i></a></li>
+
+					          		<li><a href="https://www.linkedin.com/showcase/nasp-courses/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
 
 									<li><button class="btn-search"><i class="far fa-search"></i></button></li>
-
 								</ul>
 
 				            </div>

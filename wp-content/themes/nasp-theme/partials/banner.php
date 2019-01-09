@@ -99,13 +99,20 @@ if(is_front_page()):
 
 	<div class="container h-100">
 
-		<div class="row align-content-center h-100">
+		<div class="row align-items-center h-100">
 
 			<div class="offset-md-1">
 
 				<div class="banner-slider-title">
 
-					<?php if(is_home()){ echo 'Blog';} else {the_title();}?>
+					<?php if(is_home()){ echo 'Blog';
+					}elseif(is_post_type_archive('testimonial')){
+						echo 'Testimonials';
+
+					} elseif(is_singular('jobs')){
+						echo 'Job Posting';
+					}else {the_title();}
+					?>
 
 				</div>
 

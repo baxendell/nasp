@@ -3,69 +3,7 @@ let ImageMinPlugin = require('imagemin-webpack-plugin').default;
 let CopyWebpackPlugin = require('copy-webpack-plugin');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 
-require("laravel-mix-purgecss");
-
-const vendorLibs = [
-    './assets/js/vendors/bootstrap.bundle.min.js',
-    './assets/js/vendors/jquery.smooth-scroll.js',
-    './assets/js/vendors/match-height.min.js',
-    './assets/js/vendors/slick.js',
-    './assets/js/vendors/enquire.min.js',
-    './assets/js/vendors/scrollPosStyler.min.js'
-];
-
-const purgecssWordpress = {
-    whitelistPatterns: [
-        /^rtl(-.*)?$/,
-        /^home(-.*)?$/,
-        /^blog(-.*)?$/,
-        /^archive(-.*)?$/,
-        /^date(-.*)?$/,
-        /^error404(-.*)?$/,
-        /^logged-in(-.*)?$/,
-        /^admin-bar(-.*)?$/,
-        /^no-customize-support(-.*)?$/,
-        /^wp-custom-logo(-.*)?$/,
-        /^search(-.*)?$/,
-        /^nav(-.*)?$/,
-        /^wp(-.*)?$/,
-        /^screen(-.*)?$/,
-        /^navigation(-.*)?$/,
-        /^(.*)-template(-.*)?$/,
-        /^(.*)?-?single(-.*)?$/,
-        /^postid-(.*)?$/,
-        /^post-(.*)?$/,
-        /^attachmentid-(.*)?$/,
-        /^attachment(-.*)?$/,
-        /^page(-.*)?$/,
-        /^(post-type-)?archive(-.*)?$/,
-        /^author(-.*)?$/,
-        /^gallery(-.*)?$/,
-        /^category(-.*)?$/,
-        /^tag(-.*)?$/,
-        /^card(-.*)?$/,
-        /^menu(-.*)?$/,
-        /^tags(-.*)?$/,
-        /^tax-(.*)?$/,
-        /^term-(.*)?$/,
-        /^date-(.*)?$/,
-        /^(.*)?-?paged(-.*)?$/,
-        /^says(-.*)?$/,
-        /^depth(-.*)?$/,
-        /^comment(-.*)?$/,
-        /^comments(-.*)?$/,
-        /^children(-.*)?$/,
-        /^crnb(-.*)?$/,
-        /^custom(-.*)?$/,
-        /^custom-background(-.*)?$/,
-        /^sidebar(.*)?$/,
-        /^port-description(-.*)?$/,
-        /alignleft(.*)?$/,
-        /alignright(.*)?$/,
-        /aligncenter(.*)?$/,
-        /hero(.*)?$/,
-    ]
-};
+//require("laravel-mix-purgecss");
 
 /*
  |--------------------------------------------------------------------------
@@ -81,28 +19,22 @@ const purgecssWordpress = {
 // Set Public Path Current Directory
 mix.setPublicPath('./');
 
-mix.autoload({
-    jquery: ['$', 'window.jQuery', "jQuery", "window.$", "jquery", "window.jquery"]
-});
+mix.scripts(
+    [
+        './assets/js/vendors/bootstrap.bundle.min.js',
+        './assets/js/vendors/jquery.smooth-scroll.js',
+        './assets/js/vendors/match-height.min.js',
+        './assets/js/vendors/slick.js',
+        './assets/js/vendors/enquire.min.js',
+        './assets/js/vendors/sticky.js'
+    ],
+    'assets/dist/js/vendor.js'
+);
 
 // Compile Javascript and Sass files.
 mix.js('assets/js/custom/theme.js', 'assets/dist/js/').sourceMaps();
 
-mix.sass('assets/scss/theme.scss', 'assets/dist/css/', {}).purgeCss({
-    enabled: true,
-    whitelist: ['facebook-svg'],
-    globs: [
-        path.join('./../**/*.css'),
-        path.join('./../**/*.php'),
-        path.join('./../**/*.vue'),
-        path.join('./assets/**/*.js')
-    ],
-    extensions: ['html', 'js', 'php', 'vue', 'css'],
-    whitelistPatterns: purgecssWordpress.whitelistPatterns
-});
-
-// Extract packages to a vendor file and autoload jquery.
-mix.extract(vendorLibs);
+mix.sass('assets/scss/theme.scss', 'assets/dist/css/', {});
 
 // Prevent mix from trying to resolve urls.
 mix.options({
@@ -126,17 +58,17 @@ if (!mix.config.production) {
 if (mix.config.production) {
     mix.version();
 
-    mix.webpackConfig({
-        plugins: [
-            new CopyWebpackPlugin([{
-                from: 'assets/images',
-                to: 'assets/images'
-            }]),
-            new ImageMinPlugin([{
-                test: /\.(jpe?g|png|gif|svg)$/i
-            }])
-        ]
-    });
+    // mix.webpackConfig({
+    //     plugins: [
+    //         new CopyWebpackPlugin([{
+    //             from: 'assets/images',
+    //             to: 'assets/images'
+    //         }]),
+    //         new ImageMinPlugin([{
+    //             test: /\.(jpe?g|png|gif|svg)$/i
+    //         }])
+    //     ]
+    // });
 
 }
 

@@ -16,11 +16,11 @@
 	?>
 	<div class="social-icons">
 		<span><?php echo esc_html__( 'Share:','text-domain' ); ?></span>
-		<a class="e-url" href="<?php echo esc_url( $email_url ); ?>"><i class="fa fa-envelope"></i>Email</a>
-		<a class="f-url" href="<?php echo esc_url( $facebook_url ); ?>" target="_blank"><i class="fa fa-facebook"></i>Facebook</a>
-		<a class="g-url" href="<?php echo esc_url( $google_url ); ?>" target="_blank"><i class="fa fa-google-plus"></i>Google</a>
-		<a class="t-url" href="<?php echo esc_url( $twitter_url ); ?>" target="_blank"><i class="fa fa-twitter"></i>Twitter</a>
-		<a class="p-url" href="<?php echo esc_url( $pinterest_url ); ?>" target="_blank"><i class="fa fa-pinterest"></i>Pinterest</a>
+		<a class="e-url" href="<?php echo esc_url( $email_url ); ?>"><i class="fa fa-envelope"></i></a>
+		<a class="f-url" href="<?php echo esc_url( $facebook_url ); ?>" target="_blank"><i class="fab fa-facebook"></i></i></a>
+		<a class="g-url" href="<?php echo esc_url( $google_url ); ?>" target="_blank"><i class="fab fa-google-plus"></i></a>
+		<a class="t-url" href="<?php echo esc_url( $twitter_url ); ?>" target="_blank"><i class="fab fa-twitter"></i></a>
+		<a class="p-url" href="<?php echo esc_url( $pinterest_url ); ?>" target="_blank"><i class="fab fa-pinterest"></i></a>
 	</div>
 </div> <!-- col -->
 

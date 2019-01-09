@@ -4,7 +4,7 @@
 	
 	&-nav {
 		flex-direction: row;
-		justify-content: end;
+		justify-content: flex-end;
 
 		@media screen and (max-width: 991px) {
 			display: block;
@@ -78,7 +78,7 @@
 
 	&-social {
 		display: flex;
-		justify-content: end;
+		justify-content: flex-end;
 		width: 100%;
 		margin-bottom: 15px;
 

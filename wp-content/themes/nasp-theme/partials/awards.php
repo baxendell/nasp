@@ -36,9 +36,9 @@
                 <?php while($awards_query->have_posts()): $awards_query->the_post();?>
 
                 <li>
-                  <a href="<?php the_field('award_link') ?>" target="_blank">
+                  <!--<a href="<?php the_field('award_link') ?>" target="_blank">-->
                      <?php the_post_thumbnail('full');?>
-                  </a>
+                  <!--</a>-->
                 </li>
 
                 <?php endwhile; ?>

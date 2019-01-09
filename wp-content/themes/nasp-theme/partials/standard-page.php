@@ -30,6 +30,8 @@
 
 				<?php the_post_thumbnail('full') ?>
 
+				<?php get_template_part('sidebars/generic-sidebar') ?>
+
 			</aside>
 
 		</div>

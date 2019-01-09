@@ -22,9 +22,14 @@
 		position: absolute;
 		bottom: 75px;
 		width: 100%;
+		opacity: 0;
 
 		@media screen and (min-width: 992px) {
 			bottom: 0;
+		}
+
+		&.reveal {
+			opacity: 1;
 		}
 
 		&-wrap {
@@ -67,6 +72,7 @@
 		background-color: #8b7455;
 		height: 319px;
 		margin-top: 70px;
+		background-image: url('../../images/banners/nasp-about-us-banner.jpg');
 
 		@media screen and (min-width: 768px) {
 			margin-top: 96px;
@@ -79,9 +85,6 @@
 			}
 		}
 		
-		.page-template-about-us & {
-			background-image: url('../../images/banners/nasp-about-us-banner.jpg');
-		}
 
 		.page-template-online-events & {
 			background-image: url('../../images/banners/factory-banner.jpg');
@@ -92,7 +95,7 @@
 		}
 
 		.post-type-archive-testimonial & {
-			background-image: url('../../images/banners/gas-factory.jpg');
+			background-image: url('../../images/banners/nasp-testimonial-banner.jpg');
 		}
 
 		.blog & {

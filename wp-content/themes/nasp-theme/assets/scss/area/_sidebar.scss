@@ -91,6 +91,10 @@
 }
 
 .sb-contact-info {
+
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		padding-left: 15px;
+	}
 	strong {
 		text-transform: uppercase;
 	}

@@ -2,7 +2,28 @@
 	a {
 		&.list-group-item-action {
 			font-size: 18px;
-			width: 234px;
+			width: 100%;
+
+			@media screen and (min-width: 768px) and (max-width: 991px) {
+				width: unset;
+				height: 50px;
+			}
+
+			@media screen and (min-width: 992px) {
+				width: 168px;
+			}
+
+			@media screen and (min-width: 1200px) {
+				width: 234px;
+			}
+
+			&:nth-of-type(3), &:last-of-type {
+				background-color: silver;
+				color: $white;
+				&:hover, &:focus, &.active {
+					background-color: $red;
+				}
+			}
 		}
 	}
 }

@@ -29,6 +29,27 @@
 	&.sps--blw {
 		padding: 20px 0;
 	}
+
+	.search-bar {
+		position: absolute;
+		right: -9999px;
+		bottom: -65px;
+		padding: 15px;
+		background-color: #001628;
+		transition: .5s linear;
+
+		&.active {
+			right: -20px;
+		}
+
+		input {
+			padding: 5px 10px;
+		}
+
+		.ab-search {
+			display: none;
+		}
+	}
 }
 
 .events {
