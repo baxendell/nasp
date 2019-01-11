@@ -153,7 +153,7 @@
                                         <?php include($tempUrl.'/assets/images/icons/handshake.svg') ?>
                                     </div>
                                     <div class="card_content">
-                                        <h5>Franchise Us</h5>
+                                        <h5>Franchises <br/>and Partnerships</h5>
                                     </div>
                                 </a>
                             </li>

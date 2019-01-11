@@ -77,7 +77,7 @@
 
 							<ul class="navbar-social list-inline">
 
-						          <li><a href="https://dynamic.naspweb.com/index.php/login/">Client Login</a></li>
+						          <li><a href="https://dynamic.naspweb.com/index.php/login/" target="_blank">Client Login</a></li>
 
 						          <li><a href="https://www.facebook.com/NASPweb" target="_blank"><i class="facebook-icon"></i></a></li>
 

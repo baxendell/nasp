@@ -15,7 +15,7 @@
 
           <div class="col-lg-4 text-md-right">
 
-            <a href="https://dynamic.naspweb.com/index.php/login/">Client Login</a>
+            <a href="https://dynamic.naspweb.com/index.php/login/" target="_blank">Client Login</a>
 
             <a class="brand" href="https://www.ironstridemarketing.com/" target="_blank">Website and Marketing by IronStride Marketing & Digital Co.</a>
 

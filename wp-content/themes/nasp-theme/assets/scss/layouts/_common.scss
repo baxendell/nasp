@@ -199,3 +199,9 @@
 	background-image: url('../../images/icons/noepad.svg');
 	display: block;
 }
+
+.table-responsive {
+	thead, tbody, tr {
+		width: 100%;
+	}
+}

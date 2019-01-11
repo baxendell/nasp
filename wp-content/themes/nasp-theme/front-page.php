@@ -93,7 +93,7 @@ get_header();
 
 				<div class="text-center d-none d-lg-block">
 
-					<a class="btn btn-1" href="/development/online-courses/#professional-certs">Learn More</a>
+					<a class="btn btn-1" href="/development/online-courses/">Learn More</a>
 					
 				</div>
 
@@ -108,24 +108,6 @@ get_header();
 <section class="main">
 
 	<?php get_template_part('partials/testimonials') ?>
-
-</section>
-
-<section class="home-section-4 solid-bg">
-
-	<div class="container">
-
-		<div class="row align-items-center justify-content-around">
-
-			<div class="col-12 px-md-0">
-
-				<?php the_field('section_4_text') ?>
-
-			</div>
-
-		</div>
-
-	</div>
 
 </section>
 
@@ -144,6 +126,24 @@ get_header();
 				<h2><?php the_field('section_3_title') ?></h2>
 
 				<?php the_field('section_3_text') ?>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+<section class="home-section-4 solid-bg">
+
+	<div class="container">
+
+		<div class="row align-items-center justify-content-around">
+
+			<div class="col-12 px-md-0">
+
+				<?php the_field('section_4_text') ?>
 
 			</div>
 

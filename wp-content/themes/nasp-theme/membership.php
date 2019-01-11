@@ -39,10 +39,10 @@ get_header() ?>
 			<div class="col">
 
 				<div class="list-group" id="myList" role="tablist">
-					<a class="list-group-item list-group-item-action active" data-toggle="list" href="#gold" role="tab">Gold</a>
-					<a class="list-group-item list-group-item-action" data-toggle="list" href="#gold-corp" role="tab">Gold/IASP</a>
-					<a class="list-group-item list-group-item-action" data-toggle="list" href="#silver" role="tab">Silver</a>
-					<a class="list-group-item list-group-item-action" data-toggle="list" href="#silver-corp" role="tab">Silver/IASP</a>
+					<a class="list-group-item list-group-item-action active" data-toggle="list" href="#gold" role="tab">Gold/IASP</a>
+					<a class="list-group-item list-group-item-action" data-toggle="list" href="#gold-corp" role="tab">Gold Corporate</a>
+					<a class="list-group-item list-group-item-action" data-toggle="list" href="#silver" role="tab">Silver/IASP</a>
+					<a class="list-group-item list-group-item-action" data-toggle="list" href="#silver-corp" role="tab">Silver Corporate</a>
 				</div>
 
 				<div class="tab-content">

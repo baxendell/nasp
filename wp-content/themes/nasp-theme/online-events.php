@@ -32,28 +32,32 @@ get_header() ?>
 
 		</div>
 
-		<div id="professional-certs" class="row no-gutters course-section">
+		<div id="professional-certs" class="course-wrap">
 
-			<h2>Professional Certifications</h2>
+			<div class="row no-gutters course-section">
 
-			<div class="col">
+				<h2>Professional Certifications</h2>
 
-				<div class="list-group" id="myList" role="tablist">
-					<a class="list-group-item list-group-item-action active" data-toggle="list" href="#safety-certs" role="tab">Safety Certifications</a>
-					<a class="list-group-item list-group-item-action" data-toggle="list" href="#environmental-certs" role="tab">Environmental Certifications</a>
-				</div>
+				<div class="col">
 
-				<div class="tab-content">
-				  <div class="tab-pane active" id="safety-certs" role="tabpanel">
-				  	
-				  	<?php the_field('safety_courses') ?>
+					<div class="list-group" id="myList" role="tablist">
+						<a class="list-group-item list-group-item-action active" data-toggle="list" href="#safety-certs" role="tab">Safety Certifications</a>
+						<a class="list-group-item list-group-item-action" data-toggle="list" href="#environmental-certs" role="tab">Environmental Certifications</a>
+					</div>
 
-				  </div>
-				  <div class="tab-pane" id="environmental-certs" role="tabpanel">
-				  	
-				  	<?php the_field('environmental_courses') ?>
+					<div class="tab-content">
+					  <div class="tab-pane active" id="safety-certs" role="tabpanel">
+					  	
+					  	<?php the_field('safety_courses') ?>
 
-				  </div>
+					  </div>
+					  <div class="tab-pane" id="environmental-certs" role="tabpanel">
+					  	
+					  	<?php the_field('environmental_courses') ?>
+
+					  </div>
+
+					</div>
 
 				</div>
 
@@ -61,37 +65,45 @@ get_header() ?>
 
 		</div>
 
-		<div id="coa" class="row no-gutters course-section">
+		<div id="coa" class="course-wrap">
 
-			<h2>Certificates of Achievement</h2>
+			<div class="row no-gutters course-section">
 
-			<div class="col">
+				<h2>Certificates of Achievement</h2>
 
-				<div class="course-section-intro">
-				
-					<p><?php the_field('second_block_intro') ?></p>
+				<div class="col">
+
+					<div class="course-section-intro">
+					
+						<p><?php the_field('second_block_intro') ?></p>
+
+					</div>
+
+					<?php the_field('certificates') ?>
 
 				</div>
-
-				<?php the_field('certificates') ?>
 
 			</div>
 
 		</div>
 
-		<div id="specialist-designations" class="row no-gutters course-section">
+		<div id="specialist-designations" class="course-wrap">
 
-			<h2>Specialist Designations:</h2>
+			<div class="row no-gutters course-section">
 
-			<div class="col">
+				<h2>Specialist Designations:</h2>
 
-				<div class="course-section-intro">
-				
-					<p><?php the_field('third_block_intro') ?></p>
+				<div class="col">
+
+					<div class="course-section-intro">
+					
+						<p><?php the_field('third_block_intro') ?></p>
+
+					</div>
+
+					<?php the_field('designations') ?>
 
 				</div>
-
-				<?php the_field('designations') ?>
 
 			</div>
 
