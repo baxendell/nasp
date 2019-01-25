@@ -42,7 +42,7 @@ get_header() ?>
 
 		<div class="row justify-content-around">
 
-			<div class="col-sm-5">
+			<div class="col-sm-5 pos-rel">
 
 				<?php the_field('section_2_left') ?>
 
@@ -50,7 +50,7 @@ get_header() ?>
 
 			</div>
 
-			<div class="col-sm-5">
+			<div class="col-sm-5 pos-rel">
 
 				<?php the_field('section_2_right') ?>
 

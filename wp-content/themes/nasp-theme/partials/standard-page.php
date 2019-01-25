@@ -11,7 +11,7 @@
 
 		<div class="row no-gutters">
 
-			<article class="offset-md-1 col-md-6 pr-5">
+			<article class="offset-md-1 col-md-6 pr-sm-5">
 
 				<header>
 					<h1 class="headline"><?php h1_title() ?></h1>

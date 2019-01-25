@@ -91,7 +91,7 @@ get_header() ?>
 
 			<div class="row no-gutters course-section">
 
-				<h2>Specialist Designations:</h2>
+				<h2>Specialist Designations</h2>
 
 				<div class="col">
 

@@ -24,7 +24,14 @@
 			$post_id   = 'post-id-'.$post->ID;
 			$classes   = array( $page_slug, $post_id );
 		?>
-		<!-- Google Tag Manager -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75268211-1"></script>
+
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-75268211-1');
+	</script>
 
 	</head>
 	<body <?php body_class( $classes ) ?>>
@@ -77,13 +84,13 @@
 
 							<ul class="navbar-social list-inline">
 
-						          <li><a href="https://dynamic.naspweb.com/index.php/login/" target="_blank">Client Login</a></li>
+						          <li><a href="/student-login/">Client Login</a></li>
 
 						          <li><a href="https://www.facebook.com/NASPweb" target="_blank"><i class="facebook-icon"></i></a></li>
 
 						          <li><a href="https://twitter.com/NASPweb" target="_blank"><i class="twitter-icon"></i></a></li>
 
-						          <li><a href="https://www.linkedin.com/showcase/nasp-courses/" target="_blank"><i class="linkedin-icon"></i></a></li>
+						          <li><a href="https://www.linkedin.com/in/national-association-of-safety-professionals-549820123/" target="_blank"><i class="linkedin-icon"></i></a></li>
 
 								<li><button class="btn-search"><i class="search-icon"></i></button></li>
 
@@ -110,7 +117,7 @@
 
 		            <div class="full-screen-menu-logo" itemscope itemtype="http://schema.org/Organization">
 
-		                <a href="/" itemprop="url">
+		                <a href="<?php echo $url ?>" itemprop="url">
 
 		                    <img itemprop="logo" class="img-responsive" src="<?php echo esc_url( get_stylesheet_directory_uri() ) ?>/assets/images/nasp-logo-sm.png" alt="National Association of Safety Professionals">
 
@@ -118,7 +125,7 @@
 
 		            </div>
 					
-					<a href="#" class="full-screen-menu-login">Client Login</a>
+					<a href="/student-login/" class="full-screen-menu-login">Client Login</a>
 
 				    <div class="full-screen-menu-close">
 				        <div></div>
@@ -141,13 +148,13 @@
 
 								<ul class="navbar-social navbar-social__full-screen list-inline">
 
-						          	<li><a href="https://dynamic.naspweb.com/index.php/login/">Client Login</a></li>
+						          	<li><a href="/student-login/">Client Login</a></li>
 
 						          	<li><a href="https://www.facebook.com/NASPweb" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 
 						          	<li><a href="https://twitter.com/NASPweb" target="_blank"><i class="fab fa-twitter"></i></a></li>
 
-					          		<li><a href="https://www.linkedin.com/showcase/nasp-courses/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+					          		<li><a href="https://www.linkedin.com/in/national-association-of-safety-professionals-549820123/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
 
 									<li><button class="btn-search"><i class="far fa-search"></i></button></li>
 								</ul>

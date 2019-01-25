@@ -24,7 +24,7 @@
 	z-index: 1;
 
 	@media screen and (max-width: 991px) {
-		margin-top: -46px;
+		margin-top: 46px;
 		margin-bottom: 15px;
 	}
 
@@ -230,14 +230,14 @@
 	&_section {
 		width: 100%; 
 		position: relative; 
-		height: 500px;
+		height: 650px;
 
 		@media screen and (min-width: 768px) {
-			height: 394px;
+			height: 500px;
 		}
 
 		@media screen and (min-width: 1200px) {
-			height: 360px;
+			height: 475px;
 		}
 
 		>div {

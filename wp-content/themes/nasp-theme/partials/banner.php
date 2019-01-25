@@ -38,7 +38,7 @@ if(is_front_page()):
 
 						<div class="banner-slider-item">
 
-							<h2 class="banner-slider-title"><?php the_field('second_slide_subtitle') ?></h2>
+							<h2 class="banner-slider-title"><?php the_field('second_slide_title') ?></h2>
 
 							<h3 class="banner-slider-subtitle"><?php the_field('second_slide_subtitle') ?></h3>
 
@@ -46,7 +46,7 @@ if(is_front_page()):
 
 						<div class="banner-slider-item">
 
-							<h2 class="banner-slider-title"><?php the_field('third_slide_subtitle') ?></h2>
+							<h2 class="banner-slider-title"><?php the_field('third_slide_title') ?></h2>
 
 							<h3 class="banner-slider-subtitle"><?php the_field('third_slide_subtitle') ?></h3>
 
@@ -77,7 +77,7 @@ if(is_front_page()):
 
 				<div class="events-item">
 
-					<a href="#"><div><span class="events-item-date"><?php the_field('event_date') ?> | </span> <?php the_title() ?></div> <i class="fal fa-arrow-right"></i></a>
+					<a href="<?php the_field('event_link') ?>" target="_blank"><div><span class="events-item-date"><?php the_field('event_date') ?> | </span> <?php the_title() ?></div> <i class="fal fa-arrow-right"></i></a>
 
 				</div>
 

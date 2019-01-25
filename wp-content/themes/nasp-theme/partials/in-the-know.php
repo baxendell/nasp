@@ -23,7 +23,7 @@
                             <div class="second_card">
                                 <div class="cards_container">
 
-                                <?php $post_object = get_field('featured_article_card'); 
+                                <?php $post_object = get_field('featured_article_card', 283); 
                                 if( $post_object ): $post = $post_object; setup_postdata( $post ); ?>
 
                                     <?php the_post_thumbnail('medium') ?>
@@ -40,13 +40,13 @@
 
                             <div class="third_card">
                                 <div class="cards_container">
-                                    <?php the_field('featured_course') ?>
+                                    <?php the_field('featured_course', 283) ?>
                                 </div>
                             </div>
 
                             <div class="fourth_card">
                                 <div class="cards_container">
-                                    <?php the_field('events_card') ?>
+                                    <?php the_field('events_card', 283) ?>
                                     <?php 
                                     $card_args = array(
                                     	'post_type' => 'event',
@@ -61,7 +61,7 @@
                                 		<?php while($card_Query->have_posts()): $card_Query->the_post(); ?>
                             			<li class="events-item">
 
-                            				<a href="<?php the_permalink() ?>">
+                            				<a href="<?php the_field('event_link') ?>">
                             					<div>
                             						<span class="events-item-date"><?php the_field('event_date') ?> | </span> <?php the_title() ?>
                         						</div> 
@@ -76,14 +76,14 @@
                             </div>
                             <div class="fifth_card">
                                 <div class="cards_container">
-                                    <?php the_field('on-site_training_card') ?>
+                                    <?php the_field('on-site_training_card', 283) ?>
 
                                 </div>
                             </div>
 
                             <div class="sixth_card">
                                 <div class="cards_container">
-                                    <?php the_field('franchise_card') ?>
+                                    <?php the_field('franchise_card', 283) ?>
 
                                 </div>
                             </div>                            

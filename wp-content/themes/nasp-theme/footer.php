@@ -9,13 +9,15 @@
 
             <a href="tel:8009222219">800.922.2219</a> | <a href="mailto:info@naspweb.com">info@naspweb.com</a>
 
-            <p class="copyright">©2018 NASP. All rights reserved. <a href="/development/privacy-policy/">Privacy Policy & Terms</a> </p>
+            <p class="copyright">©2018 NASP. All rights reserved. <a href="/privacy-policy/">Privacy Policy & Terms</a> </p>
 
           </div>
 
           <div class="col-lg-4 text-md-right">
 
-            <a href="https://dynamic.naspweb.com/index.php/login/" target="_blank">Client Login</a>
+            <a href="/student-login/" class="mb-3">Client Login</a> 
+
+            <a href="/partners-affiliates/">PARTNERS & AFFILIATES</a>
 
             <a class="brand" href="https://www.ironstridemarketing.com/" target="_blank">Website and Marketing by IronStride Marketing & Digital Co.</a>
 
@@ -32,12 +34,23 @@
   <?php if(is_page('775')): ?>
     <script>
       document.addEventListener( 'wpcf7mailsent', function( event ) {
-    if ( '783' == event.detail.contactFormId ) {
-        location = 'https://dynamic.naspweb.com/index.php/catalog/product/105';
-    }
-}, false );
-</script>
+        if ( '783' == event.detail.contactFormId ) {
+            location = 'https://dynamic.naspweb.com/index.php/catalog/product/105';
+        }
+      }, false );
+    </script>
 <?php endif ?>
+
+  <?php if(is_page('1110')): ?>
+    <script>
+      document.addEventListener( 'wpcf7mailsent', function( event ) {
+        if ( '1109' == event.detail.contactFormId ) {
+            location = 'https://dynamic.naspweb.com/index.php/catalog/product/143';
+        }
+      }, false );
+    </script>
+<?php endif ?>
+
 
 	<?php wp_footer() ?>
 

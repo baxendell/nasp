@@ -46,28 +46,12 @@ $media-expressions: (
 @import 'area/header';
 @import 'area/nav';
 @import 'area/hero';
-@import 'area/main';
 @import 'area/sidebar';
 @import 'area/footer';
 
-//@import 'parts/results';
-@import 'parts/intro';
-@import 'parts/testimonials';
-@import 'parts/awards';
-@import 'parts/team';
-@import 'parts/recent-news';
-
 @import 'pages/about';
-@import 'pages/contact';
 @import 'pages/blog';
 @import 'pages/page404';
-@import 'pages/single';
 @import 'pages/archive-testimonial';
-@import 'pages/archive-result';
-@import 'pages/site-map';
-@import 'pages/search';
 @import 'pages/frontpage';
-@import 'pages/generic';
-@import 'pages/video-library';
-@import 'pages/press';
 @import 'pages/membership';

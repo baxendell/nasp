@@ -55,7 +55,7 @@ get_header();
 
 						<li><a href="https://twitter.com/NASPweb" target="_blank"><i class="fab fa-twitter"></i></a></li>
 
-						<li><a href="https://www.linkedin.com/showcase/nasp-courses/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/national-association-of-safety-professionals-549820123/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
 
 					</ul>
 

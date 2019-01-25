@@ -38,7 +38,7 @@ if($e_query->have_posts()):
 
 					<div class="events-item events-item__upcoming">
 
-						<a href="<?php the_permalink() ?>">
+						<a href="<?php the_field('event_link') ?>" target="_blank">
 							<div>
 								<span class="events-item-date"><?php the_field('event_date') ?> | </span> <?php the_title() ?>
 							</div> 
@@ -46,7 +46,7 @@ if($e_query->have_posts()):
 
 						<?php the_field('event_excerpt') ?>
 
-						<a class="btn btn-1" href="<?php the_permalink() ?>">Learn More</a>
+						<a class="btn btn-1" href="<?php the_field('event_link') ?>">Learn More</a>
 
 					</div>
 
