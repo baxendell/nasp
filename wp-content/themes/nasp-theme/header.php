@@ -42,7 +42,7 @@
 		<a href="#main-content" class="skiplink" tabindex="-1">Skip Navigation</a>
 		<!-- Google Tag Manager (noscript) -->
 
-		<header id="main-header" class="banner">
+		<header id="main-header" class="banner lazy-background">
 
 			<div class="top-header sps" data-sps-offset="50">
 

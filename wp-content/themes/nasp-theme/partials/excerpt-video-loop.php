@@ -67,7 +67,7 @@ $home = esc_attr( home_url() );
     
                                 <meta itemprop="height" content="120">
     
-                                <img src="<?php the_post_thumbnail_url() ?>" class="img-responsive" />
+                                <img data-src="<?php the_post_thumbnail_url() ?>" class="img-responsive" />
     
                             </div>
     

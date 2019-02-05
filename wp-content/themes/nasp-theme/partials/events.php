@@ -11,7 +11,7 @@ if($e_query->have_posts()):
 	$i = 0;
 ?>
 
-<section class="upcoming-events">
+<section class="upcoming-events lazy-background">
 
 	<div class="container">
 

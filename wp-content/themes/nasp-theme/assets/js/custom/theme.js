@@ -506,7 +506,92 @@ jQuery(document).ready(function ($) {
                     }
                 }
             });
+        };
+
+
+
+        function preloadImage(img) {
+          const src = img.getAttribute('data-src');
+          if (!src) { return; }
+          img.src = src;
         }
+
+        function preloadBackImage(img) {
+          const src = img.getAttribute('data-style');
+          
+          if (!src) {
+            var className = img.className;
+            img.className = className + ' visible';
+
+          } else {  
+            if(img.getAttribute('style')) {
+              var style = img.getAttribute('style');
+              img.style = src + "; " + style;
+            } else {
+              img.style = src;
+            }   
+          }
+        }
+
+        var lazyLoad = function(){
+            /* LAZY LOAD IMAGES */
+            var imagesType = ["[data-src]", ".lazy-background"];   
+            
+            if ('IntersectionObserver' in window) { // if it's supported
+
+                const config = {
+                  rootMargin: '0px 0px 50px 0px',
+                  threshold: 0
+                };
+
+                let observer = new IntersectionObserver(function (entries, self) {
+                  entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                      // console.log(`Image ${entry.target.src} is in the viewport!`);
+                      if(entry.target.getAttribute('data-src')) {
+                        preloadImage(entry.target);
+                      }
+                      else {
+                        preloadBackImage(entry.target);
+                      }          
+                      // Stop watching and load the image
+                      self.unobserve(entry.target);
+                    }
+                  });
+                }, config); 
+          
+              for (i = 0; i < imagesType.length; i++) {
+                var images = document.querySelectorAll(imagesType[i]);
+
+                images.forEach(image => {
+                  observer.observe(image);
+                });
+              }  
+            } else { // not supported
+              for (i = 0; i < imagesType.length; i++) {
+                var images = document.querySelectorAll(imagesType[i]);
+
+                images.forEach(image => {
+                  if(image.getAttribute('data-src')) {
+                      preloadImage(image);
+                  }
+                  else {
+                      preloadBackImage(image);
+                  }  
+                });
+              } 
+            }
+        };
+        var vidDefer = function(){
+            document.getElementsByTagName('iframe');
+            for (var i=0; i<vidDefer.length; i++) {
+                if(vidDefer[i].getAttribute('data-src')) {
+                    vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
+                } 
+            }
+        };
+
+
 
 
         return {
@@ -520,6 +605,8 @@ jQuery(document).ready(function ($) {
                 autoPlay();
                 reveal();
                 faqScroll();
+                lazyLoad();
+                vidDefer();
             }
 
         }

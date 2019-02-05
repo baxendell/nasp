@@ -25,23 +25,6 @@ get_header();
 
 				</a>
 
-				<!-- Modal -->
-				<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-				  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-				    <div class="modal-content">
-				      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				          <span aria-hidden="true">&times;</span>
-			          </button>
-
-				      <div class="modal-body">
-				        <?php //the_field('video_embed') ?>
-				        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/302093757?autoplay=0&color=9E8862&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-				      </div>
-
-				    </div>
-				  </div>
-				</div>
-
 			</div>
 
 
@@ -75,11 +58,11 @@ get_header();
 
 </section>
 
-<section class="home-section-5 split-bg">
+<section class="home-section-5 split-bg lazy-background">
 
-	<img class="d-none d-sm-block d-lg-none" src="<?php bloginfo('template_url') ?>/assets/images/backgrounds/beam-bg.jpg"/>
+	<img class="d-none d-sm-block d-lg-none" data-src="<?php bloginfo('template_url') ?>/assets/images/backgrounds/beam-bg.jpg"/>
 
-	<img class="d-sm-none" src="<?php bloginfo('template_url') ?>/assets/images/backgrounds/beam-bg-sm.jpg"/>
+	<img class="d-sm-none" data-src="<?php bloginfo('template_url') ?>/assets/images/backgrounds/beam-bg-sm.jpg"/>
 
 	<div class="container">
 
@@ -111,11 +94,11 @@ get_header();
 
 </section>
 
-<section class="home-section-3 split-bg">
+<section class="home-section-3 split-bg lazy-background">
 
-	<img class="d-none d-sm-block d-lg-none" src="<?php bloginfo('template_url') ?>/assets/images/backgrounds/hard-hat-bg.jpg"/>
+	<img class="d-none d-sm-block d-lg-none" data-src="<?php bloginfo('template_url') ?>/assets/images/backgrounds/hard-hat-bg.jpg"/>
 
-	<img class="d-sm-none" src="<?php bloginfo('template_url') ?>/assets/images/backgrounds/hard-hat-bg-sm.jpg"/>
+	<img class="d-sm-none" data-src="<?php bloginfo('template_url') ?>/assets/images/backgrounds/hard-hat-bg-sm.jpg"/>
 
 	<div class="container">
 

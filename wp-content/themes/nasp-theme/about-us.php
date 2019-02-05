@@ -36,7 +36,7 @@ get_header() ?>
 
 </section>
 
-<section class="blue-sec red-bdr">
+<section class="blue-sec red-bdr lazy-background">
 
 	<div class="container">
 
@@ -74,7 +74,7 @@ get_header() ?>
 
 				<?php $sImg = get_field('section_3_side_image') ?>
 
-				<img class="img-responsive" src="<?php echo $sImg['url'] ?>" alt="<?php echo $sImg['alt'] ?>"/>
+				<img class="img-responsive" data-src="<?php echo $sImg['url'] ?>" alt="<?php echo $sImg['alt'] ?>"/>
 
 				<div class="sidebar-callout-offset">
 
@@ -82,7 +82,7 @@ get_header() ?>
 
 					<?php $smImg = get_field('section_3_side_small_image') ?>
 
-					<img class="img-responsive" src="<?php echo $smImg['url'] ?>" alt="<?php echo $smImg['alt'] ?>"/>
+					<img class="img-responsive" data-src="<?php echo $smImg['url'] ?>" alt="<?php echo $smImg['alt'] ?>"/>
 
 				</div>
 

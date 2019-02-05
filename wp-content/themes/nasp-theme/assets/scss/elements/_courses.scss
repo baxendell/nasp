@@ -13,7 +13,7 @@
 
 	h2 {
 		color: #c6c5c5;
-		font-size: 30px;
+		font-size: 24px;
 
 		@media screen and (max-width: 767px) {
 			text-align: center;
@@ -24,7 +24,7 @@
 		@media screen and (min-width: 768px) {
 			position: absolute;
 			left: 30px;
-			top: 68px;		
+			top: 184px;		
 			transform: rotate(-90deg);
 			transform-origin: 155px 166px 0px;
 		}
@@ -42,7 +42,7 @@
 
 	&:last-of-type {
 		h2 {
-			transform-origin: 136px 145px 0px;
+			transform-origin: 112px 110px 0px;
 		}
 	}
 

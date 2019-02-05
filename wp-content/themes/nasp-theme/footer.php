@@ -27,14 +27,36 @@
 
       </div>
 
+    <?php if(is_front_page()): ?>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+
+            <div class="modal-body">
+              <?php //the_field('video_embed') ?>
+              <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="" data-src="https://player.vimeo.com/video/302093757?autoplay=0&color=9E8862&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js" defer></script>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    <?php endif ?>
+
     </footer>
-    
-    <link href="https://fonts.googleapis.com/css?family=Khand:300,500|Overpass:300,400" rel="stylesheet">
+
+    <link rel="preload" as="font" href="https://fonts.googleapis.com/css?family=Khand:300,500|Overpass:300,400" rel="stylesheet">
+  
 
   <?php if(is_page('775')): ?>
     <script>
       document.addEventListener( 'wpcf7mailsent', function( event ) {
-        if ( '783' == event.detail.contactFormId ) {
+        if ( '785' == event.detail.contactFormId ) {
             location = 'https://dynamic.naspweb.com/index.php/catalog/product/105';
         }
       }, false );

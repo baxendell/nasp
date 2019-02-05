@@ -28,7 +28,7 @@ $featured_img_url = get_the_post_thumbnail_url('330','full');
 
 			<aside class="col-md-5">
 
-				<img src="<?php echo $featured_img_url ?>" />
+				<img data-src="<?php echo $featured_img_url ?>" />
 
 			</aside>
 

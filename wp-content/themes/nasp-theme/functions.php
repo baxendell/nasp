@@ -143,3 +143,11 @@ if ( version_compare($GLOBALS['wp_version'], '5.0-beta', '>') ) {
     add_filter( 'gutenberg_can_edit_post_type', '__return_false' );
 }
 
+
+add_filter('the_content', function ($content) {
+	//-- Change src/srcset to data attributes.
+	$content = preg_replace("/<img(.*?)(src=)(.*?)>/i", '<img$1data-$2$3>', $content);
+	
+	return $content;
+});
+

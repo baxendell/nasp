@@ -83,6 +83,12 @@ if(is_front_page()):
 
 				<?php endwhile ?>
 
+				<div class="events-item">
+
+					<img data-src="<?php bloginfo('template_url') ?>/assets/images/iacet.gif" alt="IACET"/>
+
+				</div>
+
 			</div>
 
 			<?php endif; wp_reset_postdata(); ?>
