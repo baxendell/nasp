@@ -5,15 +5,24 @@
 
         <div class="row align-items-center justify-content-between text-center-sm">
 
-          <div class="col-lg-7 col-xl-5">
+          <div class="col-lg-5 col-xl-4 bottom-footer-left">
 
-            <a href="tel:8009222219">800.922.2219</a> | <a href="mailto:info@naspweb.com">info@naspweb.com</a>
+            <a href="tel:8009222219">800.922.2219</a><br/> 
+            <a href="mailto:info@naspweb.com">info@naspweb.com</a>
 
             <p class="copyright">©2018 NASP. All rights reserved. <a href="/privacy-policy/">Privacy Policy & Terms</a> </p>
 
           </div>
 
-          <div class="col-lg-4 text-md-right">
+          <div class="bottom-footer-center col-lg-4 clearfix">
+
+            <img data-src="<?php bloginfo('template_url') ?>/assets/images/iacet.gif" alt="IACET">
+
+            <p>NASP is accredited by the International Association for Continuing Education and Training(IACET) and is accredited to issue the IACET CEU</p>
+
+          </div>
+
+          <div class="bottom-footer-right col-lg-3 col-xl-4 text-md-right">
 
             <a href="/student-login/" class="mb-3">Client Login</a> 
 

@@ -3,7 +3,7 @@ footer {
 	background: #001628;
 	padding: 50px 0 12px;
 
-	.col-lg-7 {
+	.bottom-footer-left {
 		color: $red;
 		font-size: 25px;
 
@@ -25,7 +25,23 @@ footer {
 		}
 	}
 
-	.col-lg-4 {
+	.bottom-footer-center {
+		
+		img {
+			margin: 0 auto 20px;
+			@media screen and (min-width: 768px) {
+				margin: 0 10px 25px 0;
+				float: left;
+			}
+		}
+
+		p {
+			color: $white;
+			font-size: 14px;
+		}
+	}
+
+	.bottom-footer-right {
 		a {
 			color: $gold;
 			font-size: 16px;

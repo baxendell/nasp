@@ -31,7 +31,7 @@ get_header() ?>
 			</aside>
 
 		</div>
-
+		<!--
 		<div id="professional-certs" class="course-wrap">
 
 			<div class="row no-gutters course-section">
@@ -48,16 +48,49 @@ get_header() ?>
 					<div class="tab-content">
 					  <div class="tab-pane active" id="safety-certs" role="tabpanel">
 					  	
-					  	<?php the_field('safety_courses') ?>
+					  	<?php //the_field('safety_courses') ?>
 
 					  </div>
 					  <div class="tab-pane" id="environmental-certs" role="tabpanel">
 					  	
-					  	<?php the_field('environmental_courses') ?>
+					  	<?php //the_field('environmental_courses') ?>
 
 					  </div>
 
 					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+		-->
+		<div id="safety-certs" class="course-wrap">
+
+			<div class="row no-gutters course-section">
+
+				<h2>Safety Certifications</h2>
+
+				<div class="col">
+
+					<?php the_field('safety_courses') ?>
+
+				</div>
+
+			</div>
+
+		</div>		
+
+
+		<div id="environmental-certs" class="course-wrap">
+
+			<div class="row no-gutters course-section">
+
+				<h2>Environmental Certifications</h2>
+
+				<div class="col">
+
+					<?php the_field('environmental_courses') ?>
 
 				</div>
 

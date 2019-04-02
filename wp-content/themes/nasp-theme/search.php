@@ -28,6 +28,12 @@ get_header();
 						<?php endif ?>
 
 					</div>
+					
+					<div class="blog-pagination">
+
+						<?php do_action( 'cws_pagination' ) ?>
+
+					</div><!--.blog-pagination-->					
 
 				</div>
 
