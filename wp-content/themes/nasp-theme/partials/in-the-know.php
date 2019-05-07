@@ -22,19 +22,7 @@
 
                             <div class="second_card">
                                 <div class="cards_container">
-
-                                <?php $post_object = get_field('featured_article_card', 283); 
-                                if( $post_object ): $post = $post_object; setup_postdata( $post ); ?>
-
-                                    <?php the_post_thumbnail('medium') ?>
-
-                                    <h3><?php the_title() ?></h3>
-                                    <?php the_excerpt() ?>
-
-                                    <a class="btn btn-1" href="<?php the_permalink() ?>">Read More</a>
-
-    							<?php wp_reset_postdata(); endif; ?>
-
+                                    <?php the_field('on-site_training_card', 283) ?>
                                 </div>
                             </div>
 
@@ -75,10 +63,23 @@
                                 </div>
                             </div>
                             <div class="fifth_card">
+
                                 <div class="cards_container">
-                                    <?php the_field('on-site_training_card', 283) ?>
+
+                                <?php $post_object = get_field('featured_article_card', 283); 
+                                if( $post_object ): $post = $post_object; setup_postdata( $post ); ?>
+
+                                    <?php the_post_thumbnail('medium') ?>
+
+                                    <h3><?php the_title() ?></h3>
+                                    <?php the_excerpt() ?>
+
+                                    <a class="btn btn-1" href="<?php the_permalink() ?>">Read More</a>
+
+                                <?php wp_reset_postdata(); endif; ?>
 
                                 </div>
+
                             </div>
 
                             <div class="sixth_card">
@@ -109,10 +110,10 @@
                             <li>
                                 <a class="card2_click" href="javascript:void(0)">
                                     <div class="card_image">
-                                        <?php include($tempUrl.'/assets/images/icons/article.svg') ?>
+                                        <?php include($tempUrl.'/assets/images/icons/meeting.svg') ?>
                                     </div>
                                     <div class="card_content">
-                                        <h5>Featured Article</h5>
+                                        <h5>On-site Training</h5>
                                     </div>
                                 </a>
                             </li>
@@ -138,12 +139,14 @@
                             </li>
                             <li>
                                 <a class="card5_click" href="javascript:void(0)">
+
                                     <div class="card_image">
-                                        <?php include($tempUrl.'/assets/images/icons/meeting.svg') ?>
+                                        <?php include($tempUrl.'/assets/images/icons/article.svg') ?>
                                     </div>
                                     <div class="card_content">
-                                        <h5>On-site Training</h5>
+                                        <h5>Featured Article</h5>
                                     </div>
+
                                 </a>
                             </li>
 
