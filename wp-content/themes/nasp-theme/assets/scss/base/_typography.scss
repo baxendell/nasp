@@ -85,6 +85,10 @@ ol {
 			font-size: 20px;
 			heght: 68px;
 		}
+
+		.about-3 & {
+			display: inherit;
+		}
 		
 		&:before {
 			content: counter(li);

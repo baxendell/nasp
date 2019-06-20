@@ -25,6 +25,7 @@
 			$classes   = array( $page_slug, $post_id );
 		?>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75268211-1"></script>
+		<script type="text/javascript" src="//cdn.rlets.com/capture_configs/92b/89d/080/a1c4afd91ce6617f2ece8cd.js" async="async"></script>
 
 	<script>
 	  window.dataLayer = window.dataLayer || [];

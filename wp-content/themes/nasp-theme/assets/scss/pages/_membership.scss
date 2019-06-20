@@ -3,7 +3,8 @@
 		&.list-group-item-action {
 			font-size: 18px;
 			width: 100%;
-
+			margin: 0 10px;
+			
 			@media screen and (min-width: 768px) and (max-width: 991px) {
 				width: unset;
 				height: 50px;
@@ -11,6 +12,7 @@
 
 			@media screen and (min-width: 992px) {
 				width: 168px;
+				margin: 0 30px;
 			}
 
 			@media screen and (min-width: 1200px) {
