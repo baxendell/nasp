@@ -47,6 +47,19 @@ jQuery(document).ready(function ($) {
 
         var slick = function () {
 
+           // Deal SLIDER
+            $(".deal-bar-slider").slick({
+                slidesToShow: 1,
+                infinite: true,
+                autoplay: true,
+                slidesToScroll: 1,
+                arrows: false,
+                //appendArrows: '.practice-slider__arrows',                
+                dots: false,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear'
+            });
            // Banner SLIDER
             $(".banner-slider-wrap").slick({
                 slidesToShow: 1,

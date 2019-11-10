@@ -47,6 +47,30 @@
 
 			<div class="top-header sps" data-sps-offset="50">
 
+				<div class="deal-bar">
+
+					<div class="container-fluid">
+
+						<div class="row align-items-center justify-content-between">
+
+							<div class="col-12">
+
+								<a class="deal-bar-slide text-center" href="#">Deal 1 Deal 1 Deal 1 Deal 1 Deal 1</a>
+
+								<a class="deal-bar-slide d-none" href="#">Deal 2 Deal 2 Deal 2 Deal 2 Deal 2</a>
+
+								<a class="deal-bar-slide d-none" href="#">Deal 3 Deal 3 Deal 3 Deal 3 Deal 3</a>
+
+								<a class="deal-bar-slide d-none" href="#">Deal 4 Deal 4 Deal 4 Deal 4 Deal 4</a>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
 				<div class="container-fluid">
 
 					<div class="row align-items-center justify-content-between no-gutters pos-rel">
@@ -85,7 +109,7 @@
 
 							<ul class="navbar-social list-inline">
 
-						          <li><a href="/student-login/">Client Login</a></li>
+						          <li><a href="/student-login/">Client/Member Login</a></li>
 
 						          <li><a href="https://www.facebook.com/NASPweb" target="_blank"><i class="facebook-icon"></i></a></li>
 
@@ -126,7 +150,7 @@
 
 		            </div>
 					
-					<a href="/student-login/" class="full-screen-menu-login">Client Login</a>
+					<a href="/student-login/" class="full-screen-menu-login">Client/Member Login</a>
 
 				    <div class="full-screen-menu-close">
 				        <div></div>
@@ -149,7 +173,7 @@
 
 								<ul class="navbar-social navbar-social__full-screen list-inline">
 
-						          	<li><a href="/student-login/">Client Login</a></li>
+						          	<li><a href="/student-login/">Client/Member Login</a></li>
 
 						          	<li><a href="https://www.facebook.com/NASPweb" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 
@@ -167,13 +191,13 @@
 			        </div>
 
 		        </div><!--full menu-->
-			
+					<?php if(function_exists('ditty_news_ticker')){ditty_news_ticker(2188);} ?>
 			</div>
 
 			<?php if(!is_page_template('contact.php')) { get_template_part('partials/banner'); } ?>
 
 		</header>
-		
+
 
 <?php
 if(!is_front_page()){

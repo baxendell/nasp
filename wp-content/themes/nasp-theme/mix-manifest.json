@@ -1,7 +1,5 @@
 {
-    "/assets/dist/js/theme.js": "/assets/dist/js/theme.js?id=f2549123d0e636fedd7b",
-    "/assets/dist/css/theme.css": "/assets/dist/css/theme.css?id=008529f4771985ceb3fc",
-    "/assets/dist/js/theme.js.map": "/assets/dist/js/theme.js.map?id=fb937931304cd8757d76",
-    "/assets/dist/css/theme.css.map": "/assets/dist/css/theme.css.map?id=f7f893530044bc6842de",
-    "/assets/dist/js/vendor.js": "/assets/dist/js/vendor.js?id=0b2065ce1980cdeace52"
+    "/assets/dist/js/theme.js": "/assets/dist/js/theme.js",
+    "/assets/dist/css/theme.css": "/assets/dist/css/theme.css",
+    "/assets/dist/js/vendor.js": "/assets/dist/js/vendor.js"
 }

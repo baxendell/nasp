@@ -1,6 +1,6 @@
 /**Header**/
 .top-header {
-	padding: 10px 0;
+	padding: 0 0 10px;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -50,6 +50,22 @@
 			display: none;
 		}
 	}
+}
+
+.deal-bar {
+	background: #314d64; 
+	padding: 15px 0;
+	display: none;
+
+	&-slide {
+		color: $white;
+		text-decoration: underline;
+		display: block;
+	}
+}
+
+.logo {
+	margin-top: 15px;
 }
 
 .events {
