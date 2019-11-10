@@ -105,6 +105,48 @@ get_header() ?>
 
 </section>
 
+<section class="home-section-3 split-bg lazy-background">
+
+	<img class="d-none d-sm-block d-lg-none" data-src="<?php bloginfo('template_url') ?>/assets/images/backgrounds/hard-hat-bg.jpg"/>
+
+	<img class="d-sm-none" data-src="<?php bloginfo('template_url') ?>/assets/images/backgrounds/hard-hat-bg-sm.jpg"/>
+
+	<div class="container">
+
+		<div class="row justify-content-end">
+
+			<div class="col-lg-4 align-self-end">
+
+				<h2><?php the_field('section_4_title') ?></h2>
+
+				<?php the_field('section_4_text') ?>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+<section class="home-section-4 solid-bg">
+
+	<div class="container">
+
+		<div class="row align-items-center justify-content-around">
+
+			<div class="col-12 px-md-0">
+
+				<?php the_field('section_4_bottom_text') ?>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
 <?php get_template_part('partials/events') ?>
 
 <section class="main">

@@ -80,7 +80,7 @@ get_header() ?>
 						</div>
 
 						<div class="col-md-6 text-center mb-3">
-							<a class="btn btn-1" href="https://nasp.gnosisconnect.com/nasp/login.php" target="_blank">LMS Course Login</a>
+							<a class="btn btn-1" href="https://nasp.gnosisconnect.com/nasp/login.php" target="_blank">LMS Course & Membership Login</a>
 						</div>
 					</div>
 

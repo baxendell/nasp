@@ -142,6 +142,28 @@ get_header() ?>
 
 		</div>
 
+		<div id="bta" class="course-wrap">
+
+			<div class="row no-gutters course-section" style="min-height: 450px">
+
+				<h2>Basic Training Academy</h2>
+
+				<div class="col">
+
+					<div class="course-section-intro">
+					
+						<p><?php the_field('fourth_block_intro') ?></p>
+
+					</div>
+
+					<?php the_field('fourth_block_content') ?>
+
+				</div>
+
+			</div>
+
+		</div>
+
 	</div>
 
 </section>
