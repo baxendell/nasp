@@ -47,22 +47,37 @@
 
 			<div class="top-header sps" data-sps-offset="50">
 
+				<?php $args = array(
+					'post_type' => 'deals',
+					'posts_per_page' => -1,
+				);
+
+				$dealQuery = new WP_Query($args);
+
+				if($dealQuery->have_posts()):
+
+				?>
+
 				<div class="deal-bar">
 
 					<div class="container-fluid">
 
 						<div class="row align-items-center justify-content-between">
 
-							<div class="col-12">
+							<div class="deal-bar-slider col-12">
 
-								<a class="deal-bar-slide text-center" href="#">Deal 1 Deal 1 Deal 1 Deal 1 Deal 1</a>
+								<?php while($dealQuery->have_posts()): $dealQuery->the_post();
+									if(get_field('page_link')){
+										$url = get_field('page_link');
+									} else {
+										$url = get_field('external_link');
+									}
+								?>
 
-								<a class="deal-bar-slide d-none" href="#">Deal 2 Deal 2 Deal 2 Deal 2 Deal 2</a>
+								<a class="deal-bar-slide text-center" href="<?php echo $url ?>"><?php the_title() ?></a>
 
-								<a class="deal-bar-slide d-none" href="#">Deal 3 Deal 3 Deal 3 Deal 3 Deal 3</a>
-
-								<a class="deal-bar-slide d-none" href="#">Deal 4 Deal 4 Deal 4 Deal 4 Deal 4</a>
-
+								<?php endwhile; wp_reset_postdata(); ?>
+							
 							</div>
 
 						</div>
@@ -70,6 +85,8 @@
 					</div>
 
 				</div>
+
+				<?php endif ?>
 
 				<div class="container-fluid">
 
@@ -191,7 +208,6 @@
 			        </div>
 
 		        </div><!--full menu-->
-					<?php if(function_exists('ditty_news_ticker')){ditty_news_ticker(2188);} ?>
 			</div>
 
 			<?php if(!is_page_template('contact.php')) { get_template_part('partials/banner'); } ?>

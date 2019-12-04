@@ -57,6 +57,7 @@ jQuery(document).ready(function ($) {
                 //appendArrows: '.practice-slider__arrows',                
                 dots: false,
                 speed: 500,
+                autoplaySpeed: 5000,
                 fade: true,
                 cssEase: 'linear'
             });
