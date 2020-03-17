@@ -88,19 +88,14 @@ p {
 }
 
 
-article {
+article, .entry-content {
 	>ul {
 		margin-bottom: 36px;
 	}
 	ul {
 		color: $text;
 		line-height: 1.76;
-		padding-left: 20px;
 
-		li {
-			list-style: disc;
-		}	
-		/*
 		li {
 			position: relative;
 			padding-left: 30px;
@@ -117,17 +112,66 @@ article {
 				width: 13px;
 			}
 		}
-		*/
 	}
 
+	.bullets {
+
+		ul {
+			padding-left: 20px;
+
+			li {
+				list-style: circle;
+				padding: 0;
+				margin: 0;
+
+				&:before {
+					display: none;
+				}
+
+				ul {
+					li {
+						list-style: disc;
+					}
+				}				
+			}					
+		}
+
+		ol {
+			> li {
+				list-style: decimal;
+			}
+			ul {
+				li {
+					list-style: lower-alpha;
+
+					ul {
+						li {
+							list-style: disc;
+						}
+					}
+				}
+			}
+		}
+	}	
+
 	ol {
+		padding-left: 20px;
+
+		> li {
+			list-style: decimal;
+			margin-bottom: 20px;
+
+			>ul {
+				margin-top: 20px;
+			}
+		}
 		ul {
 			li {
 				list-style: lower-alpha;
 
 				ul {
 					li {
-						list-style: lower-roman;
+						list-style: disc;
 					}
 				}
 			}

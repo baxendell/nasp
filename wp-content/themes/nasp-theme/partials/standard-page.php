@@ -3,6 +3,9 @@
  * Standard Page partial
  */
 
+if(is_page_template('page-bullets.php')) {
+	$class = "bullets";
+}
 ?>
 
 <section class="main course-1">
@@ -18,7 +21,7 @@
 					<h2 class="subtitle"><?php the_field('subtitle') ?></h2>
 				</header>
 
-				<div class="entry-content">
+				<div class="entry-content <?php echo $class ?>">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post() ?>
 
 					<?php the_content() ?>
